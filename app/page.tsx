@@ -3,31 +3,24 @@ export default function Home() {
 
   return (
     <main className="min-h-screen overflow-x-hidden relative">
-      {/* Animated ambient glow */}
+      {/* Top & bottom edge gradients with morphing animation */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-[150px] -left-[150px] w-[300px] h-[300px] rounded-full bg-[#0a2510] opacity-60 blur-[120px] animate-[drift1_20s_ease-in-out_infinite]" />
-        <div className="absolute top-[40%] -right-[120px] w-[250px] h-[250px] rounded-full bg-[#0a2010] opacity-50 blur-[100px] animate-[drift2_25s_ease-in-out_infinite]" />
-        <div className="absolute bottom-[5%] -left-[100px] w-[280px] h-[280px] rounded-full bg-[#0a2510] opacity-50 blur-[110px] animate-[drift3_22s_ease-in-out_infinite]" />
+        <div className="absolute -top-[30px] left-0 right-0 h-[100px] blur-[30px] animate-[morphTop_20s_ease-in-out_infinite]" style={{ background: "linear-gradient(90deg, #3d5a1a, #1a5040, #2a4a20)" }} />
+        <div className="absolute -bottom-[30px] left-0 right-0 h-[100px] blur-[30px] animate-[morphBottom_22s_ease-in-out_infinite]" style={{ background: "linear-gradient(90deg, #4a5a1a, #1a5025, #2a5a3a)" }} />
       </div>
 
       <style>{`
-        @keyframes drift1 {
-          0%, 100% { transform: translate(0, 0); }
-          25% { transform: translate(80px, 60px); }
-          50% { transform: translate(40px, 120px); }
-          75% { transform: translate(-40px, 60px); }
+        @keyframes morphTop {
+          0%, 100% { border-radius: 0 0 30% 70%; transform: scaleY(1); }
+          25% { border-radius: 0 0 60% 40%; transform: scaleY(1.15); }
+          50% { border-radius: 0 0 40% 60%; transform: scaleY(0.9); }
+          75% { border-radius: 0 0 70% 30%; transform: scaleY(1.1); }
         }
-        @keyframes drift2 {
-          0%, 100% { transform: translate(0, 0); }
-          25% { transform: translate(-60px, -40px); }
-          50% { transform: translate(-100px, 30px); }
-          75% { transform: translate(-30px, -80px); }
-        }
-        @keyframes drift3 {
-          0%, 100% { transform: translate(0, 0); }
-          25% { transform: translate(70px, -50px); }
-          50% { transform: translate(-30px, -90px); }
-          75% { transform: translate(50px, -30px); }
+        @keyframes morphBottom {
+          0%, 100% { border-radius: 60% 40% 0 0; transform: scaleY(1); }
+          25% { border-radius: 35% 65% 0 0; transform: scaleY(1.1); }
+          50% { border-radius: 70% 30% 0 0; transform: scaleY(0.9); }
+          75% { border-radius: 45% 55% 0 0; transform: scaleY(1.15); }
         }
       `}</style>
 
@@ -36,27 +29,30 @@ export default function Home() {
         <img src="/logo.svg" alt="Projekt Organika™" className="h-8 md:h-10 mb-8 md:mb-10" />
 
         <p className="text-[#e2a84b] font-medium text-sm md:text-lg mb-5 md:mb-6 tracking-wide text-center">
-          Podnikáš ve zdraví a čekáš na doporučení?
+          Podnikáš ve zdraví a cítíš, že Instagram je proti tobě?
         </p>
 
         <h1 className="text-center max-w-[900px] font-bold leading-[1.1] tracking-tight text-[1.75rem] md:text-[3.25rem]">
-          Získej systém, díky kterému experti ve zdraví získali{" "}
-          <span className="text-[#4ade80]">z&nbsp;0 na 10&nbsp;000+ sledujících</span>{" "}
-          a <span className="text-[#4ade80]">20+ klientů</span> za 40 dnů.
+          Máš expertizu. Máš co říct.{" "}
+          <span className="text-[#4ade80]">Ale Instagram to nevidí.</span>
         </h1>
+
+        <h2 className="mt-4 md:mt-5 text-center max-w-[800px] font-semibold leading-tight tracking-tight text-lg md:text-2xl text-[#c5d8c5]">
+          Problém není v&nbsp;tobě — je v&nbsp;systému, který ti chybí.
+        </h2>
 
         {/* Decorative line */}
         <div className="mt-6 md:mt-8 w-16 h-px bg-gradient-to-r from-transparent via-[#4ade80]/60 to-transparent" />
 
         <p className="mt-5 md:mt-6 text-center text-base md:text-xl text-[#9cb89c]">
-          Bez reklam. Bez agentury. Jen přes telefon.
+          Žádné honění trendů. Žádné strašení. Ověřený systém, krok za krokem.
         </p>
 
         <p className="mt-5 md:mt-8 text-center text-[15px] md:text-lg text-[#c5d8c5] max-w-[680px] leading-relaxed px-2">
           <strong className="text-white">3denní online trénink</strong> pro
-          experty ve zdraví, kteří chtějí přestat čekat na doporučení — a začít
-          systematicky přitahovat klienty pomocí osobní značky za 1&nbsp;hodinu denně{" "}
-          <span className="text-[#4ade80]">&quot;na automat&quot;</span>.
+          experty ve zdraví, kteří mají{" "}
+          <strong className="text-white">plnou hlavu vědomostí a zkušeností</strong> — ale neví,{" "}
+          <span className="text-[#4ade80]">jak je přetavit do obsahu, který přitahuje správné lidi a prodává.</span>
         </p>
 
         {/* Video placeholder */}
@@ -77,7 +73,7 @@ export default function Home() {
           href={CTA_LINK}
           className="mt-8 md:mt-10 w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
         >
-          CHCI SYSTÉM ZA 990 KČ
+          CHCI SYSTÉM ZA ZVÝHODNĚNÝCH 990 KČ
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
@@ -120,7 +116,7 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 md:mt-6 text-[#9cb89c] leading-relaxed text-[15px] md:text-lg">
-              Celostní medicína. Klienti z doporučení. Nula příspěvků. Přesně tohle byla naše startovní pozice.
+              Celostní medicína. Klienti z doporučení. Nula příspěvků. Přesně tohle byla naše startovní pozice s klientem.
             </p>
 
             <div className="mt-6 md:mt-8 space-y-6 md:space-y-8">
@@ -130,11 +126,7 @@ export default function Home() {
               </p>
               <p className="text-[#c5d8c5] leading-relaxed text-[15px] md:text-base">
                 <span className="text-[#4ade80] font-semibold">Za 6 měsíců:</span>{" "}
-                <strong className="text-white">700+ kvalifikovaných leadů.</strong> Dnes má přes 30&nbsp;000 sledujících a stabilní přísun klientů.
-              </p>
-              <p className="text-[#c5d8c5] leading-relaxed text-[15px] md:text-base">
-                <span className="text-[#4ade80] font-semibold">Dnes:</span>{" "}
-                <strong className="text-white">Plný kalendář klientů každý měsíc.</strong> Bez závislosti na doporučeních.
+                <strong className="text-white">700+ kvalifikovaných leadů</strong> — lidí, kteří aktivně chtěli služby celostní medicíny. Dnes má přes 30&nbsp;000 sledujících a stabilní přísun nových klientů každý měsíc.
               </p>
             </div>
 
@@ -148,9 +140,9 @@ export default function Home() {
               <div className="inline-block">
                 <div className="w-8 h-px bg-[#4ade80]/40 mx-auto mb-4" />
                 <p className="text-lg md:text-xl font-semibold italic">
-                  Tohle nebyla náhoda. Byl to <span className="text-[#4ade80] not-italic">systém</span>.
+                  Tohle nebyla náhoda. Tohle nebyl trend. Byl to <span className="text-[#4ade80] not-italic">systém</span>.
                 </p>
-                <p className="text-lg md:text-xl font-semibold mt-1">Teď je řada na Tobě.</p>
+                <p className="text-lg md:text-xl font-semibold mt-1">A teď ho můžeš mít i ty.</p>
                 <div className="w-8 h-px bg-[#4ade80]/40 mx-auto mt-4" />
               </div>
             </div>
@@ -162,35 +154,41 @@ export default function Home() {
       <section className="px-6 py-16 md:py-32">
         <div className="max-w-[600px] mx-auto">
           <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-14 text-2xl md:text-[2.5rem]">
-            Přečti si tohle a řekni mi, jestli se v&nbsp;tom nepoznáváš:
+            Tohle znáš, že?
           </h2>
 
           <img src="/sad.webp" alt="" className="w-full max-h-[300px] md:max-h-[400px] rounded-2xl mb-8 md:mb-14 object-cover" />
 
           <div className="space-y-6 md:space-y-8">
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Každý měsíc žiješ v nejistotě</strong>{" "}
-              — přijdou klienti, nebo nepřijdou? A ta nejistota tě vyčerpává víc než samotná práce.
+              <strong className="text-white">Máš v hlavě tolik vědomostí — ale nedokážeš je dostat ven</strong>{" "}
+              do formy, která na Instagramu funguje. Jak dlouhý popisek? Jak video? Co vlastně sdílet?
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Sleduješ, jak experti s polovičním know-how</strong>{" "}
-              mají plné kalendáře… zatímco ty čekáš na další doporučení od známého.
+              <strong className="text-white">Přijde ti, že účty ve zdraví vypadají všechny stejně</strong>{" "}
+              — generické rady, &bdquo;sněz tohle a stane se zázrak.&ldquo; Ty to tak dělat nechceš. Ale nevíš,{" "}
+              <strong className="text-white">jak být svůj/svá a zároveň efektivní.</strong>
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Víš, že Instagram je příležitost.</strong>{" "}
-              Ale pokaždé, když ho otevřeš, cítíš frustraci — protože nemáš jasný systém.
+              <strong className="text-white">Zkoušel/a jsi to po svém — a nefungovalo to.</strong>{" "}
+              Dřív stačila fotka, dnes už ne. Instagram se změnil a ty cítíš, že tě ten algoritmus ignoruje.
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              A mezitím? <strong className="text-white">Lidi, kterým bys mohl změnit život, o tobě prostě neví</strong>{" "}
-              — a místo tebe najdou někoho s lepším marketingem a horší odborností.
+              <strong className="text-white">Rodina a známí se tě roky ptají na rady</strong>{" "}
+              — ale na Instagramu ticho. Žádná interakce. Žádná komunita. Jen pár známých, co pasivně sledují a nikdy nereagují.
+            </p>
+            <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
+              <strong className="text-white">Máš strašně moc informací</strong>{" "}
+              z kurzů a rádců — cílovka, trendy, konzistence. Ale čím víc rad, tím víc zmatku. A čím víc zmatku,{" "}
+              <strong className="text-white">tím víc pochybuješ o sobě.</strong>
             </p>
           </div>
 
           {/* Highlighted closing */}
           <div className="mt-10 md:mt-14 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
             <p className="text-center text-lg md:text-2xl font-semibold leading-snug">
-              Každý den, kdy nejsi vidět, přicházíš o&nbsp;klienty, kteří Tě právě teď potřebují.{" "}
-              <span className="text-[#4ade80]">Jen&nbsp;tě&nbsp;nevidí.</span>
+              Problém nikdy nebyl v&nbsp;tom, co víš. Problém byl v&nbsp;tom, že ti nikdo neukázal{" "}
+              <span className="text-[#4ade80]">JAK</span> to sdílet tak, aby to fungovalo.
             </p>
           </div>
         </div>
@@ -201,30 +199,39 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(20,60,20,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-[600px] mx-auto relative z-10">
           <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-14 text-2xl md:text-[2.5rem]">
-            Tohle můžeš být <span className="text-[#4ade80]">TY:</span>
+            Teď si představ, že za <span className="text-[#4ade80]">3–6 měsíců:</span>
           </h2>
 
           <img src="/happy.webp" alt="" className="w-full max-h-[300px] md:max-h-[400px] rounded-2xl mb-8 md:mb-14 object-cover" />
 
           <div className="space-y-6 md:space-y-8">
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              Přestaneš být &quot;ten šikovný odborník, o kterém nikdo neví&quot; — a{" "}
-              <strong className="text-white">staneš se autoritou, kterou lidi sledují, sdílejí a doporučují</strong> i cizím.
+              <strong className="text-white">Přes den ti napadají nápady a souvislosti</strong>{" "}
+              — a přesně víš, jak z nich udělat obsah, který lidi zajímá. Víš co tvořit, jak a proč to funguje.
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Klienti Ti píšou sami</strong>{" "}
-              — ne proto, že tě doporučil kamarád, ale proto, že viděli tvůj obsah a řekli si: &quot;Tohle je přesně ten člověk, kterého hledám.&quot;
+              <strong className="text-white">Sdílíš své myšlenky bez strachu</strong>{" "}
+              — autenticky, po svém, bez strašení a bez pocitu, že musíš být někdo jiný. A lidi na to reagují.
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Tvůj kalendář se plní</strong>{" "}
-              bez toho, abys někoho prosil, přesvědčoval nebo dával slevy.
+              <strong className="text-white">Přibývají ti relevantní sledující</strong>{" "}
+              — ne čísla kvůli číslům, ale skutečná komunita lidí, kteří se zajímají o to samé co ty. A komunikují s tebou.
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Tvá odbornost pracuje pro Tebe 24/7</strong> — a přesně víš, co dělat.
+              <strong className="text-white">Klienti ti píšou sami.</strong>{" "}
+              Nehoníš se za nimi. Nemusíš nikoho přesvědčovat. Tvůj profil a obsah to dělá za tebe.
             </p>
             <p className="text-[#c5d8c5] leading-[1.75] text-[15px] md:text-xl">
-              <strong className="text-white">Máš kompletní systém od A do Z,</strong>{" "}
-              co Tě dostane na oči statisícům klientů a přivádí poptávky &quot;na automat&quot;.
+              <strong className="text-white">Konečně máš klid</strong>{" "}
+              — protože víš, že to funguje. Víš, že nemusíš chodit zpět do práce, kterou nechceš dělat. A můžeš se na 100 % věnovat tomu, v čem jsi nejlepší.
+            </p>
+          </div>
+
+          {/* Highlighted closing */}
+          <div className="mt-10 md:mt-14 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
+            <p className="text-center text-lg md:text-2xl font-semibold leading-snug">
+              Nejde jen o Instagram. Jde o to, abys konečně přestal/a pochybovat o tom, co víš —{" "}
+              <span className="text-[#4ade80]">a začal/a tím měnit životy.</span>
             </p>
           </div>
 
@@ -234,27 +241,37 @@ export default function Home() {
           {/* System pitch */}
           <div className="text-center">
             <h3 className="font-bold leading-tight tracking-tight text-xl md:text-[2rem]">
-              Ukradni můj systém, co funguje expertům ve zdraví, jako ty.
+              Jak to funguje? Ukradni můj &bdquo;Growmat&ldquo; systém.
             </h3>
             <p className="mt-5 md:mt-6 text-[#c5d8c5] text-[15px] md:text-lg leading-relaxed">
-              Projekt Organika ti dá{" "}
-              <strong className="text-white">ověřený 3-fázový proces, který proměňuje neviditelné experty v autority s plnými kalendáři:</strong>
+              Trénink Projekt Organika ti dá{" "}
+              <strong className="text-white">ověřený 3-fázový systém, který proměňuje neviditelné experty v autority se stabilním přísunem klientů:</strong>
             </p>
 
-            <div className="mt-6 md:mt-8 flex flex-col items-start max-w-[320px] mx-auto gap-2.5 md:gap-3 text-[15px] md:text-base">
-              {["Funguje jen s telefonem", "Funguje s hodinou denně", "Funguje bez koruny do reklamy", "Funguje od nuly — a rychle."].map((line, i) => (
-                <div key={i} className="flex items-center gap-3 text-[#c5d8c5]">
-                  <span className="text-[#4ade80]">&rarr;</span>
+            <div className="mt-6 md:mt-8 flex flex-col items-start max-w-[400px] mx-auto gap-2.5 md:gap-3 text-[15px] md:text-base">
+              {[
+                "Funguje jen s telefonem — žádné programování, žádná mravenčí práce",
+                "Funguje s hodinou denně — aby ti zůstal čas na rodinu, klienty a sebe",
+                "Funguje bez koruny do reklamy — čistě organicky",
+                "Funguje od nuly — a rychle. I když zatím nemáš ani jeden příspěvek.",
+              ].map((line, i) => (
+                <div key={i} className="flex items-start gap-3 text-[#c5d8c5] text-left">
+                  <span className="text-[#4ade80] mt-0.5 shrink-0">&rarr;</span>
                   <span>{line}</span>
                 </div>
               ))}
             </div>
 
+            <p className="mt-6 md:mt-8 text-[#c5d8c5] text-[15px] md:text-lg leading-relaxed">
+              <strong className="text-white">Není to další kurz, kde se budeš měsíce učit teorii.</strong>{" "}
+              Je to kompletní systém na zlatém podnose — krok za krokem, s přesným plánem co dělat každý den.
+            </p>
+
             <a
               href={CTA_LINK}
               className="mt-8 md:mt-10 w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
-              CHCI PLNÝ KALENDÁŘ — 990 KČ
+              CHCI KOMPLETNÍ SYSTÉM — 990 KČ
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -274,9 +291,27 @@ export default function Home() {
           {/* Day cards with numbers and connecting lines */}
           <div className="flex flex-col items-center">
             {[
-              { num: "01", day: "Den 1", title: "Předtím, než začneš tvořit…", warn: "Jedno špatné rozhodnutí na startu = tisíce zhlédnutí, nula klientů.", text: <>Nastavíš profil přesně tak, jak vypadaly účty, které vyrostly na 10K+. Ne poznámky — <strong className="text-white">hotový profil.</strong></> },
-              { num: "02", day: "Den 2", title: "Obsah, ze kterého chodí klienti", warn: "Jak oslovit +100 000 relevantních lidí jedním videem.", text: <>Odhalíš tajemství milionových videí mých klientů. A natočíš 1. video s mou pomocí. <strong className="text-white">Krok za krokem. Dnes.</strong></> },
-              { num: "03", day: "Den 3", title: "Kompletní mapa od 0 po stabilní příjem", warn: 'Ukradneš můj "Growmat" systém — klienti přes Instagram a AI.', text: <>Celý systém od A do Z: fáze růstu, automatizace, škálování. <strong className="text-white">Z profilu uděláš magnet na klienty.</strong></> },
+              {
+                num: "01",
+                day: "Den 1",
+                title: "Profil, ze kterého je jasné, proč jsi autorita",
+                subtitle: "Nastavíš se mnou profil krok za krokem tak, aby návštěvník do 3 sekund věděl: „Tohle je přesně ten člověk, kterého hledám.\"",
+                text: <>Nastavíš profil přesně tak, jak vypadaly účty, které vyrostly na 10K+ a generovaly <strong className="text-white">desítky klientů měsíčně.</strong> Ne poznámky — <strong className="text-white">hotový profil.</strong></>,
+              },
+              {
+                num: "02",
+                day: "Den 2",
+                title: "Jak dostat myšlenku z hlavy do obsahu, který lidi zajímá",
+                subtitle: "Natočíš 1. úspěšné video s mou pomocí. Dnes.",
+                text: <>Odhalíš přesný systém, díky kterému videa mých klientů sbírají miliony zhlédnutí — a zároveň přivádějí klienty. <strong className="text-white">Budeš přesně vědět, jak vzít svůj nápad a zpracovat ho do formy, která na Instagramu funguje — bez strašení, bez generických rad, po svém.</strong></>,
+              },
+              {
+                num: "03",
+                day: "Den 3",
+                title: 'Kompletní mapa od 0 po stabilní příjem',
+                subtitle: 'Ukradneš můj 3-fázový "Growmat" systém co přivádí klienty ve zdraví pomocí Instagramu a AI — za 1-2 hodiny práce denně.',
+                text: <>Odejdeš s konkrétním plánem a kroky, díky kterým nebudeš přemýšlet &bdquo;co mám dnes postovat.&ldquo; <strong className="text-white">Na celý týden dopředu budeš vědět co, jak a proč sdílíš.</strong></>,
+              },
             ].map((d, i) => (
               <div key={d.num} className="w-full flex flex-col items-center">
                 {/* Number */}
@@ -286,7 +321,7 @@ export default function Home() {
                 <div className="w-full rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
                   <p className="text-[10px] md:text-xs text-[#4ade80] font-medium tracking-wider uppercase mb-1">{d.day}</p>
                   <h3 className="font-bold text-base md:text-xl mb-3 md:mb-4">{d.title}</h3>
-                  <p className="text-[#e2a84b] font-medium text-xs md:text-sm mb-3">{d.warn}</p>
+                  <p className="text-[#e2a84b] font-medium text-xs md:text-sm mb-3">{d.subtitle}</p>
                   <p className="text-[#c5d8c5] leading-relaxed text-[15px] md:text-lg">{d.text}</p>
                 </div>
 
@@ -315,17 +350,29 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(20,60,20,0.05)_0%,transparent_50%)] pointer-events-none" />
         <div className="max-w-[600px] md:max-w-[800px] mx-auto relative z-10">
           <h2 className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]">
-            Ale to není všechno.
+            Navíc dostaneš:
           </h2>
           <p className="text-center text-[15px] md:text-lg text-[#9cb89c] mb-10 md:mb-14">
-            Tyhle bonusy dostaneš k tomu:
+            Tyhle bonusy jsou součástí Projektu Organika:
           </p>
 
           <div className="space-y-4 md:space-y-6">
             {[
-              { n: "01", title: "Rozbor 5 virálních videí, co získala miliony zhlédnutí", text: <>Uvidíš přesně, proč fungují — a jak to zopakovat u sebe. <strong className="text-white">Rozdíl mezi &quot;zkouším, co zabere&quot; a &quot;vím přesně, co natočit.&quot;</strong></> },
-              { n: "02", title: "3 případové studie klientů: kompletní nahlédnutí pod pokličku", text: <>3 reální klienti. 3 různé obory. 1 systém. <strong className="text-white">Vezmeš si mapu, která už někoho dovedla do cíle.</strong></> },
-              { n: "03", title: "Dárek v hodnotě 10 000 Kč pro ty, co to myslí vážně", text: <>Dokonči všechny lekce a odemkni odměnu. <strong className="text-white">Detaily uvnitř</strong> — tohle je důvod dokončit každý úkol.</> },
+              {
+                n: "01",
+                title: "Rozbor 5 virálních videí, co získala miliony zhlédnutí",
+                text: <>Přestaň hádat, co funguje — podívej se přesně, proč to funguje. Rozeberu ti krok za krokem <strong className="text-white">5 reálných příspěvků mých klientů ze zdraví,</strong> které nasbíraly miliony organických zhlédnutí. <strong className="text-white">Tohle je rozdíl mezi &bdquo;zkouším, co zabere&ldquo; a &bdquo;vím přesně, co natočit a proč.&ldquo;</strong></>,
+              },
+              {
+                n: "02",
+                title: "3 případové studie klientů: kompletní nahlédnutí pod pokličku",
+                text: <>3 reální klienti. 3 různé zdravotní obory. 1 systém. Ukážu ti přesně, co dělali v prvním týdnu, jak vypadal jejich obsah, odkud přišli klienti a co konkrétně fungovalo. <strong className="text-white">Nebudeš si vymýšlet vlastní cestu naslepo — vezmeš si mapu, která už někoho dovedla do cíle.</strong></>,
+              },
+              {
+                n: "03",
+                title: "Dárek v hodnotě 10 000 Kč pro ty, co to myslí vážně",
+                text: <>Dokonči všechny lekce a úkoly ve 3denním tréninku — a odemkni odměnu, která ti dá masivní náskok. <strong className="text-white">Detaily odhalím uvnitř</strong> — ale věř mi: tohle je důvod, proč budeš chtít dokončit každý úkol do posledního.</>,
+              },
             ].map((b) => (
               <div key={b.n} className="rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8 flex gap-4 md:gap-6">
                 {/* Large decorative number */}
@@ -342,7 +389,8 @@ export default function Home() {
           <div className="mt-8 md:mt-10 text-center py-5 md:py-6 border-t border-b border-[#1a2a1b]">
             <p className="text-[15px] md:text-lg text-[#9cb89c]">
               Hodnota bonusů: <strong className="text-white">15 000+ Kč.</strong> Tvoje cena:{" "}
-              <strong className="text-[#4ade80] text-xl md:text-2xl">0 Kč</strong>
+              <strong className="text-[#4ade80] text-xl md:text-2xl">0 Kč</strong>{" "}
+              — jsou součástí Projektu Organika.
             </p>
           </div>
 
@@ -351,7 +399,7 @@ export default function Home() {
               href={CTA_LINK}
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
-              CHCI SYSTÉM + BONUSY ZA 990 KČ
+              CHCI SYSTÉM + VŠECHNY BONUSY ZA 990 KČ
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -387,8 +435,8 @@ export default function Home() {
 
           {/* Big summary stat */}
           <div className="mt-10 md:mt-14 text-center py-6 md:py-8 border-t border-[#1a2a1b]">
-            <p className="text-4xl md:text-6xl font-bold text-white tracking-tight">20 000 000+</p>
-            <p className="text-sm md:text-base text-[#9cb89c] mt-2">organických zhlédnutí. <span className="text-[#4ade80]">0 Kč do reklamy.</span></p>
+            <p className="text-3xl md:text-5xl font-bold text-white tracking-tight">6 účtů z 0 na 10K+. Přes 20 000 000 zhlédnutí.</p>
+            <p className="text-base md:text-lg text-[#9cb89c] mt-2">Stovky klientů pro mé klienty. <span className="text-[#4ade80]">0 Kč do reklamy.</span></p>
           </div>
 
           <div className="text-center mt-4 md:mt-6">
@@ -396,7 +444,7 @@ export default function Home() {
               href={CTA_LINK}
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
-              VSTOUPIT DO PROJEKTU ORGANIKA
+              VSTOUPIT DO PROJEKTU ORGANIKA ZA 990 KČ
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -416,23 +464,26 @@ export default function Home() {
 
           <div className="space-y-4 text-[#c5d8c5] leading-relaxed text-[15px] md:text-lg">
             <p>
-              Před dvěma lety mi obchodní partner ukradl všechno — podcastové účty s 30&nbsp;000 sledujícími. Ze dne na den jsem stál na nule. S&nbsp;dluhy. Bez domova. Bez příjmu.
+              Před dvěma lety mi obchodní partner ukradl všechno, co jsme spolu vybudovali — podcastové účty s 30&nbsp;000 sledujícími, na kterých jsem dřel měsíce. Ze dne na den jsem stál na nule. S&nbsp;dluhy. Bez domova. Bez příjmu. Bez plánu.
             </p>
             <p>
               Měl jsem dvě možnosti: buď se zhroutit, nebo začít znovu — tentokrát líp.
             </p>
+            <p>
+              Rozhodl jsem se pro druhou. Vzal jsem všechno, co jsem se naučil o sociálních sítích, a začal budovat profily pro experty ve zdraví. Ne teorie z kurzů — praxe. Reálné účty, reálné výsledky.
+            </p>
             <p className="text-white font-medium">
-              Za poslední rok: 6 účtů z nuly na 10 000+ sledujících. Přes 20 milionů organických zhlédnutí. Vše bez jediné koruny do reklamy.
+              Za poslední rok: 6 účtů z nuly na 10 000+ sledujících. Přes 20 milionů organických zhlédnutí. Desítky nových klientů pro každého z nich. Vše bez jediné koruny do reklamy.
             </p>
             <p>
-              Dnes pomáhám podnikatelům ve zdraví proměnit Instagram na jejich hlavní zdroj klientů.
+              Dnes pomáhám podnikatelům ve zdraví dostat jejich expertizu k lidem, kteří ji potřebují. Beru to, v čem jsi opravdu dobrý/á — a dávám ti systém, který to promění v obsah, komunitu a klienty.
             </p>
           </div>
 
           {/* Signature quote */}
           <div className="mt-8 md:mt-10 pl-4 md:pl-6 border-l-2 border-[#4ade80]/40">
             <p className="text-[#4ade80] font-medium italic text-base md:text-lg">
-              Protože tvoje znalosti mohou lidem měnit životy. Mojí rolí je zajistit, aby o nich svět věděl.
+              Protože tvoje znalosti mohou lidem měnit životy. Chybí ti jen systém, aby se o nich svět dozvěděl.
             </p>
           </div>
         </div>
@@ -446,7 +497,11 @@ export default function Home() {
             <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-4">Tvoje investice</div>
 
             <p className="mt-3 text-[#9cb89c] text-[15px] md:text-lg leading-relaxed">
-              Kouč na Instagram: 5 000–15 000 Kč/h. Agentura: 20 000+ Kč/měsíc.
+              Najít si kouče na Instagram tě vyjde na 5 000–15 000 Kč za hodinu. Agentura? 20 000+ Kč měsíčně. A většina z nich nemá ani zlomek výsledků, které vidíš výše.
+            </p>
+
+            <p className="mt-3 text-[#c5d8c5] text-[15px] md:text-lg leading-relaxed">
+              Projekt Organika ti dá <strong className="text-white">kompletní systém + šablony + případové studie + soutěž o mentoring + doživotní přístup.</strong>
             </p>
           </div>
 
@@ -464,13 +519,13 @@ export default function Home() {
             <p className="text-5xl md:text-7xl font-bold text-white mt-1">990 Kč</p>
 
             <p className="mt-5 md:mt-6 text-[#c5d8c5] text-sm md:text-base leading-relaxed max-w-[420px] mx-auto">
-              Pokud ti trénink nepřinese alespoň 3 &bdquo;aha momenty&ldquo;, napiš mi —{" "}
-              <strong className="text-white">vrátím ti peníze.</strong>
+              A pokud ti trénink nepřinese alespoň 3 konkrétní &bdquo;aha momenty&ldquo;, které změní tvůj přístup k Instagramu, napiš mi —{" "}
+              <strong className="text-white">vrátím ti peníze.</strong> Bez otázek.
             </p>
 
             <div className="mt-5 md:mt-8 py-3 px-4 md:py-4 md:px-6 rounded-xl bg-[#141e15]/50 border border-[#1a2a1b]/50 inline-block">
-              <p className="text-[#e2a84b] font-medium text-sm md:text-base">Prvních 100 účastníků za tuhle cenu.</p>
-              <p className="text-xs md:text-sm text-[#9cb89c] mt-1">Potom 1 990 Kč.</p>
+              <p className="text-[#e2a84b] font-medium text-sm md:text-base">Zvýhodněná cena 990 Kč platí pro prvních 100 účastníků.</p>
+              <p className="text-xs md:text-sm text-[#9cb89c] mt-1">Jakmile jich bude 100, cena se zvýší na 1 990 Kč.</p>
             </div>
 
             <div className="mt-5 md:mt-8">
@@ -478,7 +533,7 @@ export default function Home() {
                 href={CTA_LINK}
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
               >
-                VSTOUPIT ZA 990 KČ
+                VSTOUPIT ZA ZVÝHODNĚNÝCH 990 KČ
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -501,14 +556,46 @@ export default function Home() {
 
           <div className="divide-y divide-[#1a2a1b]">
             {[
-              { q: "Nemám zkušenosti s natáčením — zvládnu to?", a: "Ano. Systém funguje i bez mluvení na kameru. Stačí telefon a 1 hodina denně." },
-              { q: "Už mám web a klienty z doporučení — k čemu mi to bude?", a: "Web čeká, až ho někdo najde. Instagram aktivně přivádí lidi k tobě. Teprve Instagram mým klientům naplnil kalendáře." },
-              { q: "Musím být online každý den?", a: "Ne. Growmat systém je na 1\u20132 hodiny denně." },
-              { q: "Čím se tohle liší od kurzů na sociální sítě?", a: 'Většina kurzů ti řekne \u201Ebuď konzistentní.\u201C Projekt Organika ti dá konkrétní systém \u2014 co postovat, jak to strukturovat, jak z toho udělat klienty.' },
-              { q: "Co když to u mě nebude fungovat?", a: 'Systém fungoval u 6 různých účtů. Pokud ti trénink nepřinese alespoň 3 \u201Eaha momenty\u201C, vrátím ti peníze.' },
-              { q: "Je to i pro lidi mimo zdraví?", a: "Ne. Výhradně pro oblast zdraví — fyzické, mentální, celostní." },
-              { q: "Jak dlouho mám přístup?", a: "Navždy. Doživotní přístup ke všemu obsahu i aktualizacím." },
-              { q: "Je to živý trénink nebo nahrávka?", a: "Kombinace. Video lekce, úkoly a možnost soutěžit o 1:1 mentoring. Vlastním tempem." },
+              {
+                q: "Mám v hlavě spoustu informací a zkoušel/a jsem už různé kurzy. Čím je tohle jiné?",
+                a: "Většina kurzů ti přidá další informace na hromadu — „buď konzistentní, najdi si cílovku, sleduj trendy.\" Jenže ty nemáš problém s informacemi. Máš jich až moc. Projekt Organika ti nedá další teorii. Dá ti systém, který všechno zjednoduší: přesně co sdílet, jak to zpracovat a proč to funguje. Méně přemýšlení, víc výsledků.",
+              },
+              {
+                q: "Nechci dělat generický obsah a strašit lidi. Bude to fungovat i když chci být autentický/á?",
+                a: "Přesně na tohle je Growmat systém postavený. Neučím tě honit trendy nebo dělat clickbait. Učím tě, jak vzít tvoje myšlenky — tak jak je máš v hlavě — a zpracovat je do formy, která přitahuje správné lidi. Po svém, bez kompromisů na autenticitě.",
+              },
+              {
+                q: "Nemám zkušenosti s natáčením — zvládnu to?",
+                a: "Ano. Systém je navržený tak, aby fungoval i bez mluvení na kameru. Ukážu ti přesné formáty, které nevyžadují žádné technické dovednosti — stačí telefon a 1 hodina denně. Žádné programování, žádná mravenčí práce.",
+              },
+              {
+                q: "Nechci se honit za čísly. Chci relevantní komunitu.",
+                a: "To je přesně ten správný přístup — a je to přesně to, co systém dělá. Nestavíme čísla kvůli číslům. Stavíme komunitu lidí, kteří se zajímají o tvoje téma, interagují s tvým obsahem a časem se stávají klienty. Kvalita, ne kvantita.",
+              },
+              {
+                q: "Bojím se, že to bude časově náročné a zase se budu učit něco složitého.",
+                a: "Celý trénink je 3 dny. Systém je navržený na 1-2 hodiny denně. Nejde o to trávit hodiny tvorbou — jde o to přesně vědět co dělat a neztrácet čas přemýšlením „co mám dnes postovat.\" Méně práce, víc výsledků.",
+              },
+              {
+                q: "Už mám web a klienty z doporučení — k čemu mi to bude?",
+                a: "Web čeká, až ho někdo najde. Instagram aktivně přivádí lidi k tobě. Většina mých klientů měla web a klienty z doporučení — ale teprve Instagram jim dal jistotu, že nepřijdou o příjem, když se zrovna nikdo neozve.",
+              },
+              {
+                q: "Co když to u mě nebude fungovat?",
+                a: "Systém fungoval u 6 různých účtů v různých zdravotních tématech. Pokud ho aplikuješ, fungovat bude. A pokud ti trénink nepřinese alespoň 3 konkrétní „aha momenty\", vrátím ti peníze. Jednoduché.",
+              },
+              {
+                q: "Je to i pro lidi mimo zdraví?",
+                a: "Ne. Projekt Organika je výhradně pro oblast zdraví — fyzické, mentální, celostní. Pokud v těchto oblastech pomáháš lidem, jsi tu správně.",
+              },
+              {
+                q: "Jak dlouho mám přístup?",
+                a: "Navždy. Zaplatíš jednou, máš doživotní přístup ke všemu obsahu i budoucím aktualizacím.",
+              },
+              {
+                q: "Je to živý trénink nebo nahrávka?",
+                a: "Kombinace. Trénink probíhá v uzavřené skupině na Circle — dostaneš video lekce, praktické úkoly a možnost soutěžit o 1:1 mentoring. Na konci každé lekce máš praktický akční krok. Vše si pustíš vlastním tempem.",
+              },
             ].map((faq, i) => (
               <details key={i} className="group py-5 md:py-6 cursor-pointer">
                 <summary className="flex items-center justify-between gap-3 list-none font-semibold text-[15px] md:text-lg text-white hover:text-[#4ade80] transition-colors">
@@ -534,13 +621,13 @@ export default function Home() {
             <div className="rounded-xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-6">
               <p className="text-xs text-[#6b8a6b] font-medium mb-2">Možnost 1</p>
               <p className="text-[#9cb89c] leading-relaxed text-sm md:text-base">
-                Zavřeš stránku. Za rok budeš stále žít z doporučení a sledovat, jak kolegové s horší odborností plní kalendáře.
+                Zavřeš tuhle stránku. Za rok budeš stále hledat další kurz, další rady, další strategii — a stále cítit, že Instagram je proti tobě. Stále budeš radit rodině a známým, kteří tvoje rady stejně nevyužijí — zatímco lidi, kterým bys opravdu mohl/a změnit život, o tobě neví.
               </p>
             </div>
             <div className="rounded-xl border border-[#4ade80]/30 bg-[#0e160f] p-5 md:p-6">
               <p className="text-xs text-[#4ade80] font-medium mb-2">Možnost 2</p>
               <p className="text-[#c5d8c5] leading-relaxed text-sm md:text-base">
-                Vstoupíš do Projektu Organika. Za 3 dny systém. Za měsíc první klienty z Instagramu.
+                Vstoupíš do Projektu Organika. Za 3 dny budeš přesně vědět, jak dostat své myšlenky z hlavy do obsahu, který funguje. Za měsíc budeš mít první relevantní sledující a interakce. A za rok? Za rok budeš ten expert / ta expertka, za kterou si lidi přijdou — ne proto, že honíš trendy, ale proto, že jsi konečně dal/a svému know-how systém, který si zaslouží.
               </p>
             </div>
           </div>
@@ -549,15 +636,15 @@ export default function Home() {
           <div className="w-12 h-px bg-[#4ade80]/40 mx-auto mb-6 md:mb-8" />
 
           <h3 className="font-bold leading-tight mb-8 md:mb-10 text-lg md:text-[2rem]">
-            Tvoje odbornost si zaslouží být vidět.{" "}
-            <span className="text-[#4ade80]">Dej jí systém, který z ní udělá plný kalendář.</span>
+            Tvoje expertiza si zaslouží být vidět.{" "}
+            <span className="text-[#4ade80]">Dej jí systém, který jí to umožní.</span>
           </h3>
 
           <a
             href={CTA_LINK}
             className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
           >
-            ZAČÍT TEĎ ZA 990 KČ
+            ZAČÍT TEĎ ZA ZVÝHODNĚNÝCH 990 KČ
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -573,8 +660,8 @@ export default function Home() {
       <footer className="px-6 py-12 md:py-16 border-t border-[#1a2a1b]">
         <div className="max-w-[500px] md:max-w-[600px] mx-auto text-center">
           <p className="text-[#9cb89c] leading-relaxed text-sm md:text-base">
-            <strong className="text-white">P.S.</strong> Zvýhodněná cena 990 Kč platí jen do naplnění prvních 100 míst.
-            @celiso.cz má přes 30 000 sledujících a plný kalendář. Jediný rozdíl mezi ním a tebou? On ten systém už má.
+            <strong className="text-white">P.S.</strong> Zvýhodněná cena 990 Kč platí jen do naplnění prvních 100 míst. Potom se cena vrací na 1 990 Kč — bez výjimek, bez prodlužování.
+            @celiso.cz dnes má přes 30 000 sledujících a stabilní přísun klientů každý měsíc. Jediný rozdíl mezi ním a tebou? On ten systém už má. Teď ho můžeš mít i ty.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-2 md:gap-4 text-[10px] md:text-xs text-[#4a6b4a] flex-wrap">
