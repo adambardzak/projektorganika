@@ -42,7 +42,7 @@ export function Navbar({ ctaLink }: { ctaLink: string }) {
             <img
               src="/logo.svg"
               alt="Projekt Organika™"
-              className="h-5 md:h-6 w-auto"
+              className="h-8 md:h-9 w-auto"
             />
           </a>
 

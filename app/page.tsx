@@ -3,19 +3,19 @@ import { Navbar } from "./Navbar";
 export default function Home() {
   const CTA_LINK = "https://buy.stripe.com/00w28k0i6fn9esUaH5e3e00";
 
-  const MOCKUP = "/LANDING%20PAGE%20GRAFIKA/MOCKUP.png";
-  const VYSLEDEK_1 = "/LANDING%20PAGE%20V%C3%9DSLEDKY/25.png";
-  const VYSLEDEK_2 = "/LANDING%20PAGE%20V%C3%9DSLEDKY/26.png";
-  const VYSLEDEK_3 = "/LANDING%20PAGE%20V%C3%9DSLEDKY/27.png";
-  const VYSLEDEK_4 = "/LANDING%20PAGE%20V%C3%9DSLEDKY/28.png";
-  const VYSLEDEK_5 = "/LANDING%20PAGE%20V%C3%9DSLEDKY/29.png";
-  const RECENZE_1 = "/RECENZE%20TEXT/IMG_2755%20(1).jpg";
-  const RECENZE_2 = "/RECENZE%20TEXT/IMG_4563.jpg";
-  const RECENZE_3 = "/RECENZE%20TEXT/IMG_6931%20(1).jpg";
-  const RECENZE_4 = "/RECENZE%20TEXT/N%C3%A1vrh%20bez%20n%C3%A1zvu%20(3).png";
-  const RECENZE_5 = "/RECENZE%20TEXT/RECNZE%205%20(P%C5%99%C3%ADsp%C4%9Bvek%20na%20Instagramu%20(4%20%205)).png";
-  const RECENZE_6 = "/RECENZE%20TEXT/RECENZE%206.png";
-  const RECENZE_7 = "/RECENZE%20TEXT/Sn%C3%ADmek%20obrazovky%202026-04-05%20v%2023.44.20.png";
+  const MOCKUP = "/img/grafika/mockup.webp";
+  const VYSLEDEK_1 = "/img/vysledky/25.webp";
+  const VYSLEDEK_2 = "/img/vysledky/26.webp";
+  const VYSLEDEK_3 = "/img/vysledky/27.webp";
+  const VYSLEDEK_4 = "/img/vysledky/28.webp";
+  const VYSLEDEK_5 = "/img/vysledky/29.webp";
+  const RECENZE_1 = "/img/recenze/img-2755-1.webp";
+  const RECENZE_2 = "/img/recenze/img-4563.webp";
+  const RECENZE_3 = "/img/recenze/img-6931-1.webp";
+  const RECENZE_4 = "/img/recenze/navrh-bez-nazvu-3.webp";
+  const RECENZE_5 = "/img/recenze/recnze-5-prispevek-na-instagramu-4-5.webp";
+  const RECENZE_6 = "/img/recenze/recenze-6.webp";
+  const RECENZE_7 = "/img/recenze/snimek-obrazovky-2026-04-05-v-23-44-20.webp";
 
   return (
     <main id="top" className="min-h-screen overflow-x-hidden relative pb-20 md:pb-0">
@@ -43,7 +43,7 @@ export default function Home() {
       `}</style>
 
       {/* ==================== HERO ==================== */}
-      <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-20 md:pt-28 pb-8 md:pb-20">
+      <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-32 md:pt-28 pb-8 md:pb-20">
         <p className="text-[#e2a84b] font-medium text-[12px] md:text-lg mb-2 md:mb-6 tracking-wide text-center">
           Podnikáš ve zdraví a Instagram tě ignoruje?
         </p>
@@ -513,7 +513,7 @@ export default function Home() {
         <div className="max-w-[600px] md:max-w-[800px] mx-auto">
           <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-4">Kdo za tím stojí?</div>
 
-          <img src="/maty.png" alt="Matyáš Linda" className="w-full md:float-left md:w-56 md:mr-8 md:mb-4 rounded-2xl mb-6 object-cover object-[center_20%] max-h-[300px] md:max-h-[320px]" />
+          <img src="/img/maty.webp" alt="Matyáš Linda" className="w-full md:float-left md:w-56 md:mr-8 md:mb-4 rounded-2xl mb-6 object-cover object-[center_20%] max-h-[300px] md:max-h-[320px]" />
 
           <h2 className="font-bold text-2xl md:text-3xl mb-5 md:mb-6">Matyáš Linda</h2>
 
