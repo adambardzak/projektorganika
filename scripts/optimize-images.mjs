@@ -10,6 +10,8 @@ const jobs = [
   ["LANDING PAGE GRAFIKA", "grafika", 1600, 82],
   ["LANDING PAGE VÝSLEDKY", "vysledky", 1100, 80],
   ["RECENZE TEXT", "recenze", 900, 80],
+  ["img/predapo", "case-studies", 800, 80],
+  ["img/sklienty", "s-klienty", 900, 82],
 ];
 
 async function ensureDir(p) {
@@ -49,8 +51,17 @@ async function run() {
   for (const [srcDir, outSub, maxWidth, quality] of jobs) {
     const srcPath = join(PUBLIC_DIR, srcDir);
     const outPath = join(OUT_DIR, outSub);
+    let entries;
+    try {
+      entries = await readdir(srcPath);
+    } catch (err) {
+      if (err.code === "ENOENT") {
+        console.log(`SKIP ${srcDir} (not found)`);
+        continue;
+      }
+      throw err;
+    }
     await ensureDir(outPath);
-    const entries = await readdir(srcPath);
     for (const entry of entries) {
       if (entry.startsWith(".")) continue;
       const ext = entry.split(".").pop()?.toLowerCase();

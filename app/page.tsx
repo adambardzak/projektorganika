@@ -1,14 +1,12 @@
-import { Navbar } from "./Navbar";
+import { Header } from "./Header";
+import { StickyCta } from "./StickyCta";
+import { CaseStudiesCarousel } from "./CaseStudiesCarousel";
+import { Wordmark } from "./Wordmark";
 
 export default function Home() {
   const CTA_LINK = "https://buy.stripe.com/00w28k0i6fn9esUaH5e3e00";
 
   const MOCKUP = "/img/grafika/mockup.webp";
-  const VYSLEDEK_1 = "/img/vysledky/25.webp";
-  const VYSLEDEK_2 = "/img/vysledky/26.webp";
-  const VYSLEDEK_3 = "/img/vysledky/27.webp";
-  const VYSLEDEK_4 = "/img/vysledky/28.webp";
-  const VYSLEDEK_5 = "/img/vysledky/29.webp";
   const RECENZE_1 = "/img/recenze/img-2755-1.webp";
   const RECENZE_2 = "/img/recenze/img-4563.webp";
   const RECENZE_3 = "/img/recenze/img-6931-1.webp";
@@ -19,31 +17,11 @@ export default function Home() {
 
   return (
     <main id="top" className="min-h-screen overflow-x-hidden relative pb-20 md:pb-0">
-      <Navbar ctaLink={CTA_LINK} />
-
-      {/* Top & bottom edge gradients with morphing animation */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-[30px] left-0 right-0 h-[100px] blur-[30px] animate-[morphTop_20s_ease-in-out_infinite]" style={{ background: "linear-gradient(90deg, #3d5a1a, #1a5040, #2a4a20)" }} />
-        <div className="absolute -bottom-[30px] left-0 right-0 h-[100px] blur-[30px] animate-[morphBottom_22s_ease-in-out_infinite]" style={{ background: "linear-gradient(90deg, #4a5a1a, #1a5025, #2a5a3a)" }} />
-      </div>
-
-      <style>{`
-        @keyframes morphTop {
-          0%, 100% { border-radius: 0 0 30% 70%; transform: scaleY(1); }
-          25% { border-radius: 0 0 60% 40%; transform: scaleY(1.15); }
-          50% { border-radius: 0 0 40% 60%; transform: scaleY(0.9); }
-          75% { border-radius: 0 0 70% 30%; transform: scaleY(1.1); }
-        }
-        @keyframes morphBottom {
-          0%, 100% { border-radius: 60% 40% 0 0; transform: scaleY(1); }
-          25% { border-radius: 35% 65% 0 0; transform: scaleY(1.1); }
-          50% { border-radius: 70% 30% 0 0; transform: scaleY(0.9); }
-          75% { border-radius: 45% 55% 0 0; transform: scaleY(1.15); }
-        }
-      `}</style>
+      <Header />
+      <StickyCta ctaLink={CTA_LINK} />
 
       {/* ==================== HERO ==================== */}
-      <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-32 md:pt-28 pb-8 md:pb-20">
+      <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-28 md:pt-28 pb-8 md:pb-20">
         <p className="text-[#e2a84b] font-medium text-[12px] md:text-lg mb-2 md:mb-6 tracking-wide text-center">
           Podnikáš ve zdraví a Instagram tě ignoruje?
         </p>
@@ -67,48 +45,83 @@ export default function Home() {
           />
         </div>
 
-        {/* Social proof bar — single compact row on mobile */}
-        <div className="mt-5 md:mt-10 w-full max-w-[860px] flex flex-wrap items-center justify-center gap-x-3 md:gap-x-8 gap-y-2">
-          {/* Stars + rating */}
-          <div className="flex items-center gap-1.5 md:gap-3">
+        {/* Social proof — author card + rating pill */}
+        <div className="mt-5 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 md:gap-8">
+          {/* Author card */}
+          <div className="flex items-center gap-3">
+            <img
+              src="/img/maty.webp"
+              alt="Matyáš Linda"
+              className="w-11 h-11 md:w-14 md:h-14 rounded-full object-cover border border-[#1a2a1b] shrink-0"
+            />
+            <div className="min-w-0">
+              <p className="flex items-center gap-1.5 text-white font-semibold text-[14px] md:text-base leading-tight">
+                Matyáš Linda
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="shrink-0 md:w-[17px] md:h-[17px]"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="11" fill="#4ade80" />
+                  <path
+                    d="M7.5 12.5l3 3 6-6.5"
+                    stroke="#0a120b"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </p>
+              <p className="text-[12px] md:text-sm text-[#9cb89c] mt-0.5 leading-tight">
+                Zakladatel Growmat Academy
+              </p>
+            </div>
+          </div>
+
+          {/* Experts pill — stars + avatars + count */}
+          <div className="flex items-center gap-2 md:gap-2.5 rounded-full border border-[#1a2a1b] bg-[#0e160f]/60 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2">
             <div className="flex items-center gap-0.5">
               {[0, 1, 2, 3, 4].map((i) => (
-                <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#e2a84b" className="md:w-[18px] md:h-[18px]">
+                <svg
+                  key={i}
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="#e2a84b"
+                  className="md:w-[14px] md:h-[14px]"
+                >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               ))}
             </div>
-            <span className="text-white font-bold text-[12px] md:text-base">5,0</span>
-          </div>
-
-          <div className="w-px h-4 md:h-10 bg-[#1a2a1b]" />
-
-          {/* Clients avatars */}
-          <div className="flex items-center gap-1.5 md:gap-3">
-            <div className="flex -space-x-1.5 md:-space-x-2">
+            <div className="h-3.5 md:h-4 w-px bg-[#1a2a1b]" />
+            <div className="flex -space-x-1.5">
               {[
-                "linear-gradient(135deg, #4ade80, #1a5c25)",
-                "linear-gradient(135deg, #e2a84b, #8a5a1a)",
-                "linear-gradient(135deg, #6b9b6b, #2a4a2a)",
-              ].map((bg, i) => (
-                <div
+                { src: "/img/experti/vermione.png", alt: "Vermione" },
+                { src: "/img/experti/martin.png", alt: "Martin" },
+                { src: "/img/experti/celiso.png", alt: "Celiso" },
+              ].map((e, i) => (
+                <img
                   key={i}
-                  className="w-5 h-5 md:w-9 md:h-9 rounded-full border-[1.5px] md:border-2 border-[#0a0e0a]"
-                  style={{ background: bg }}
+                  src={e.src}
+                  alt={e.alt}
+                  className="w-5 h-5 md:w-6 md:h-6 rounded-full object-cover border-[1.5px] border-[#0a120b] bg-[#0e160f]"
                 />
               ))}
             </div>
-            <span className="text-white font-bold text-[12px] md:text-base">6+ expertů</span>
-          </div>
-
-          <div className="w-px h-4 md:h-10 bg-[#1a2a1b]" />
-
-          {/* Big views number */}
-          <div className="flex items-center gap-1.5 md:gap-3">
-            <span className="text-base md:text-3xl font-bold text-white tracking-tight">30M+</span>
-            <span className="text-[11px] md:text-[13px] text-[#6b8a6b]">zhlédnutí</span>
+            <span className="text-white font-semibold text-[12px] md:text-[14px]">
+              50+ expertů
+            </span>
           </div>
         </div>
+
+        {/* Views sub-line */}
+        <p className="mt-4 md:mt-5 text-[13px] md:text-base text-[#9cb89c]">
+          <span className="text-white font-bold text-[15px] md:text-lg">30M+</span> organických zhlédnutí
+        </p>
 
         <a
           href={CTA_LINK}
@@ -144,29 +157,35 @@ export default function Home() {
 
       {/* ==================== PAIN POINTS ==================== */}
       <section className="px-6 py-16 md:py-32">
-        <div className="max-w-[600px] mx-auto">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-14 text-2xl md:text-[2.5rem]">
+        <div className="max-w-[600px] md:max-w-[1100px] mx-auto">
+          <h2 className="font-bold leading-tight tracking-tight text-center mb-10 md:mb-16 text-2xl md:text-[2.5rem]">
             Tohle znáš, že?
           </h2>
 
-          <img src="/sad.webp" alt="" className="w-full max-h-[300px] md:max-h-[400px] rounded-2xl mb-8 md:mb-14 object-cover" />
+          <div className="md:grid md:grid-cols-[1fr_1.2fr] md:gap-12 lg:gap-16 md:items-center">
+            <img
+              src="/sad.webp"
+              alt=""
+              className="w-full max-h-[300px] md:max-h-none md:aspect-[4/5] rounded-2xl mb-8 md:mb-0 object-cover"
+            />
 
-          <div className="space-y-5 md:space-y-7">
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Máš v hlavě hromadu vědomostí</strong> — ale nedokážeš je dostat ven do formy, která na Instagramu funguje.
-            </p>
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Účty ve zdraví vypadají všechny stejně.</strong> Ty to tak dělat nechceš — ale nevíš, jak být svůj/svá a zároveň efektivní.
-            </p>
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Zkoušel/a jsi to po svém — a nic.</strong> Algoritmus tě ignoruje.
-            </p>
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Máš hromadu rad z kurzů.</strong> Čím víc rad, tím víc zmatku. A tím víc pochybuješ o sobě.
-            </p>
+            <div className="space-y-5 md:space-y-7">
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Máš v hlavě hromadu vědomostí</strong> — ale nedokážeš je dostat ven do formy, která na Instagramu funguje.
+              </p>
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Účty ve zdraví vypadají všechny stejně.</strong> Ty to tak dělat nechceš — ale nevíš, jak být svůj/svá a zároveň efektivní.
+              </p>
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Zkoušel/a jsi to po svém — a nic.</strong> Algoritmus tě ignoruje.
+              </p>
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Máš hromadu rad z kurzů.</strong> Čím víc rad, tím víc zmatku. A tím víc pochybuješ o sobě.
+              </p>
+            </div>
           </div>
 
-          <div className="mt-10 md:mt-14 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
+          <div className="max-w-[700px] mx-auto mt-10 md:mt-16 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
             <p className="text-center text-lg md:text-2xl font-semibold leading-snug">
               Problém nikdy nebyl v&nbsp;tom, co víš. Chyběl ti systém{" "}
               <span className="text-[#4ade80]">JAK</span> to sdílet.
@@ -178,38 +197,42 @@ export default function Home() {
       {/* ==================== TRANSFORMATION ==================== */}
       <section className="px-6 py-16 md:py-32 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(20,60,20,0.06)_0%,transparent_60%)] pointer-events-none" />
-        <div className="max-w-[600px] mx-auto relative z-10">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-14 text-2xl md:text-[2.5rem]">
+        <div className="max-w-[600px] md:max-w-[1100px] mx-auto relative z-10">
+          <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-16 text-2xl md:text-[2.5rem]">
             Tohle můžeš být <span className="text-[#4ade80]">TY:</span>
           </h2>
 
-          <img src="/happy.webp" alt="" className="w-full max-h-[300px] md:max-h-[400px] rounded-2xl mb-8 md:mb-14 object-cover" />
+          <div className="md:grid md:grid-cols-[1.2fr_1fr] md:gap-12 lg:gap-16 md:items-center">
+            <img
+              src="/happy.webp"
+              alt=""
+              className="w-full max-h-[300px] md:max-h-none md:aspect-[4/5] rounded-2xl mb-8 md:mb-0 object-cover md:order-2"
+            />
 
-          <div className="space-y-5 md:space-y-7">
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Víš přesně, co tvořit</strong> — a proč to funguje.
-            </p>
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Sdílíš bez strachu</strong> — autenticky, po svém. A lidi reagují.
-            </p>
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Přibývá ti relevantní komunita</strong> — lidi, které tvoje téma baví.
-            </p>
-            <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-              <strong className="text-white">Klienti ti píšou sami.</strong> Nehoníš se za nimi. Profil to dělá za tebe.
-            </p>
+            <div className="space-y-5 md:space-y-7 md:order-1">
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Víš přesně, co tvořit</strong> — a proč to funguje.
+              </p>
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Sdílíš bez strachu</strong> — autenticky, po svém. A lidi reagují.
+              </p>
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Přibývá ti relevantní komunita</strong> — lidi, které tvoje téma baví.
+              </p>
+              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
+                <strong className="text-white">Klienti ti píšou sami.</strong> Nehoníš se za nimi. Profil to dělá za tebe.
+              </p>
+            </div>
           </div>
 
-          <div className="mt-10 md:mt-14 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
+          <div className="max-w-[700px] mx-auto mt-10 md:mt-16 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
             <p className="text-center text-lg md:text-2xl font-semibold leading-snug">
               Nejde jen o Instagram. Jde o to, abys přestal/a pochybovat o tom, co víš —{" "}
               <span className="text-[#4ade80]">a začal/a tím měnit životy.</span>
             </p>
           </div>
 
-          <div className="my-12 md:my-16 w-full h-px bg-gradient-to-r from-transparent via-[#1a2a1b] to-transparent" />
-
-          <div className="text-center">
+          <div className="max-w-[600px] md:max-w-[720px] mx-auto mt-16 md:mt-24 text-center">
             <h3 className="font-bold leading-tight tracking-tight text-xl md:text-[2rem]">
               Převezmi ověřený &bdquo;Growmat&ldquo; systém.
             </h3>
@@ -217,23 +240,69 @@ export default function Home() {
               3-fázový systém, který proměňuje <strong className="text-white">neviditelné experty v autority se stabilním přísunem klientů.</strong>
             </p>
 
-            <div className="mt-6 md:mt-8 flex flex-col items-start max-w-[440px] mx-auto gap-2.5 md:gap-3 text-[15px] md:text-base">
+            <div className="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 border-y border-[#1a2a1b]/60 py-10 md:py-12">
               {[
-                "Funguje jen s telefonem — bez mravenčí práce",
-                "Funguje s hodinou denně",
-                "Funguje bez koruny do reklamy",
-                "Funguje od nuly — a rychle",
-              ].map((line, i) => (
-                <div key={i} className="flex items-start gap-3 text-[#c5d8c5] text-left">
-                  <span className="text-[#4ade80] mt-0.5 shrink-0">&rarr;</span>
-                  <span>{line}</span>
+                {
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="6" y="2" width="12" height="20" rx="2.5" />
+                      <path d="M10 18h4" />
+                    </svg>
+                  ),
+                  title: "Jen telefon",
+                  sub: "Bez mravenčí práce",
+                },
+                {
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="9.5" />
+                      <path d="M12 7v5l3.5 2" />
+                    </svg>
+                  ),
+                  title: "Hodina denně",
+                  sub: "Vejde se do dne",
+                },
+                {
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="6" width="20" height="12" rx="2" />
+                      <circle cx="12" cy="12" r="2.2" />
+                      <path d="M5.5 12h.01M18.5 12h.01" />
+                    </svg>
+                  ),
+                  title: "0 Kč reklama",
+                  sub: "Jen organický dosah",
+                },
+                {
+                  icon: (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M13 2L3 14h8l-1 8 11-13h-8l0-7z" />
+                    </svg>
+                  ),
+                  title: "Od nuly rychle",
+                  sub: "Žádné měsíce čekání",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className={`flex flex-col items-center text-center px-2 md:px-5 ${
+                    i > 0 ? "md:border-l md:border-[#1a2a1b]/60" : ""
+                  }`}
+                >
+                  <div className="text-[#4ade80] mb-4 md:mb-5">{item.icon}</div>
+                  <p className="font-semibold text-white text-[14px] md:text-[15px] leading-tight tracking-tight">
+                    {item.title}
+                  </p>
+                  <p className="text-[#6b8a6b] text-[12px] md:text-[13px] mt-1.5 leading-tight">
+                    {item.sub}
+                  </p>
                 </div>
               ))}
             </div>
 
             <a
               href={CTA_LINK}
-              className="mt-8 md:mt-10 w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
+              className="mt-8 md:mt-12 w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
               CHCI SYSTÉM — 990 KČ
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -423,8 +492,8 @@ export default function Home() {
       </section>
 
       {/* ==================== SOCIAL PROOF ==================== */}
-      <section id="recenze" className="px-6 py-16 md:py-32">
-        <div className="max-w-[600px] md:max-w-[900px] mx-auto">
+      <section id="recenze" className="px-4 md:px-6 py-16 md:py-32">
+        <div className="max-w-[900px] mx-auto">
           <h2 className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]">
             Tohle nejsou sliby.
           </h2>
@@ -438,73 +507,64 @@ export default function Home() {
               <img
                 key={i}
                 src={src}
+                loading="lazy"
                 alt={`Recenze ${i + 1}`}
                 className="rounded-xl w-full border border-[#1a2a1b] bg-[#0e160f]"
               />
             ))}
           </div>
+        </div>
 
-          {/* Results screenshots */}
-          <div className="mt-10 md:mt-14 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-            {[VYSLEDEK_1, VYSLEDEK_2, VYSLEDEK_3, VYSLEDEK_4, VYSLEDEK_5].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Výsledek ${i + 1}`}
-                className="rounded-xl w-full border border-[#1a2a1b] bg-[#0e160f]"
-              />
-            ))}
-          </div>
-
-          <div className="mt-10 md:mt-14 text-center py-6 md:py-8 border-t border-[#1a2a1b]">
-            <p className="text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-              6 účtů z 0 na 10K+. 20 000 000+ zhlédnutí.
-            </p>
-            <p className="text-base md:text-lg text-[#9cb89c] mt-2">
-              Stovky klientů pro mé klienty. <span className="text-[#4ade80]">0 Kč do reklamy.</span>
-            </p>
-          </div>
+        <div className="max-w-[900px] mx-auto mt-12 md:mt-20 text-center py-6 md:py-8 border-t border-[#1a2a1b]">
+          <p className="text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+            6 účtů z 0 na 10K+. 20 000 000+ zhlédnutí.
+          </p>
+          <p className="text-base md:text-lg text-[#9cb89c] mt-2">
+            Stovky klientů pro mé klienty. <span className="text-[#4ade80]">0 Kč do reklamy.</span>
+          </p>
         </div>
       </section>
 
-      {/* ==================== CASE STUDY ==================== */}
-      <section className="px-6 py-16 md:py-24">
-        <div className="max-w-[600px] md:max-w-[800px] mx-auto">
-          <div className="rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-6 md:p-12">
-            <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-4">
-              Případová studie
+      {/* ==================== CASE STUDIES ==================== */}
+      <section id="case-studies" className="py-16 md:py-32">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-10 md:mb-16 px-4 md:px-6">
+            <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-3">
+              Případové studie
             </div>
-
-            <h2 className="font-bold leading-tight tracking-tight text-xl md:text-[2.25rem]">
-              @celiso.cz:{" "}
-              <span className="text-[#4ade80]">Z 0 na 10 000 sledujících</span> a +20 klientů za 40 dnů
+            <h2 className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]">
+              Jak to vypadá v praxi
             </h2>
-
-            <p className="mt-4 md:mt-6 text-[#9cb89c] leading-relaxed text-[15px] md:text-lg">
-              Celostní medicína. Nula příspěvků. Žádná reklama. Taková byla startovní pozice.
-            </p>
-
-            <div className="mt-6 md:mt-8 space-y-4">
-              <p className="text-[#c5d8c5] leading-relaxed text-[15px] md:text-base">
-                <span className="text-[#4ade80] font-semibold">40 dnů:</span>{" "}
-                <strong className="text-white">10 000+ sledujících</strong> a první klienti z Instagramu.
-              </p>
-              <p className="text-[#c5d8c5] leading-relaxed text-[15px] md:text-base">
-                <span className="text-[#4ade80] font-semibold">6 měsíců:</span>{" "}
-                <strong className="text-white">700+ kvalifikovaných leadů.</strong> Dnes 30&nbsp;000+ sledujících a stabilní přísun klientů každý měsíc.
-              </p>
-            </div>
-
-            <div className="mt-8 md:mt-10 text-center">
-              <div className="inline-block">
-                <div className="w-8 h-px bg-[#4ade80]/40 mx-auto mb-4" />
-                <p className="text-lg md:text-xl font-semibold italic">
-                  Žádná náhoda. Žádný trend. <span className="text-[#4ade80] not-italic">Ověřený systém.</span>
-                </p>
-                <div className="w-8 h-px bg-[#4ade80]/40 mx-auto mt-4" />
-              </div>
-            </div>
           </div>
+
+          <CaseStudiesCarousel
+            cases={[
+              {
+                before: "/img/case-studies/vermione-pred.webp",
+                after: "/img/case-studies/vermione-po.webp",
+              },
+              {
+                before: "/img/case-studies/celiso-pred.webp",
+                after: "/img/case-studies/celiso-po.webp",
+              },
+              {
+                before: "/img/case-studies/martin-pred.webp",
+                after: "/img/case-studies/martin-po.webp",
+              },
+              {
+                before: "/img/case-studies/gabi-pred.webp",
+                after: "/img/case-studies/gabi-po.webp",
+              },
+              {
+                before: "/img/case-studies/mitolife-pred.webp",
+                after: "/img/case-studies/mitrolife-po.webp",
+              },
+              {
+                before: "/img/case-studies/sober-pred-1-1.webp",
+                after: "/img/case-studies/sober-po.webp",
+              },
+            ]}
+          />
         </div>
       </section>
 
@@ -515,7 +575,29 @@ export default function Home() {
 
           <img src="/img/maty.webp" alt="Matyáš Linda" className="w-full md:float-left md:w-56 md:mr-8 md:mb-4 rounded-2xl mb-6 object-cover object-[center_20%] max-h-[300px] md:max-h-[320px]" />
 
-          <h2 className="font-bold text-2xl md:text-3xl mb-5 md:mb-6">Matyáš Linda</h2>
+          <h2 className="flex items-center gap-2.5 font-bold text-2xl md:text-3xl mb-2">
+            Matyáš Linda
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="shrink-0 md:w-6 md:h-6"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="11" fill="#4ade80" />
+              <path
+                d="M7.5 12.5l3 3 6-6.5"
+                stroke="#0a120b"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </h2>
+          <p className="text-[#4ade80] font-medium text-sm md:text-base mb-5 md:mb-6">
+            Expert na sociální sítě ve zdraví
+          </p>
 
           <div className="space-y-4 text-[#c5d8c5] leading-relaxed text-[15px] md:text-lg">
             <p>
@@ -744,7 +826,7 @@ export default function Home() {
             <strong className="text-white">P.S.</strong> 990 Kč platí jen pro prvních 100 míst. Pak 1 990 Kč. @celiso.cz má dnes 30&nbsp;000+ sledujících. Jediný rozdíl mezi ním a tebou? On ten systém už má.
           </p>
 
-          <img src="/logo.svg" alt="Projekt Organika™" className="h-6 md:h-8 mx-auto mt-8 opacity-30" />
+          <Wordmark size="sm" className="mt-8 opacity-60" />
 
           <p className="mt-4 text-[10px] md:text-xs text-[#1a2a1b]">
             &copy; {new Date().getFullYear()} Projekt Organika™ &middot; Growmat Academy
