@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 type CaseStudy = {
   before: string;
   after: string;
+  handle?: string;
+  result?: string;
 };
 
 export function CaseStudiesCarousel({ cases }: { cases: CaseStudy[] }) {
@@ -116,6 +118,20 @@ export function CaseStudiesCarousel({ cases }: { cases: CaseStudy[] }) {
                   loading="lazy"
                   className="w-full rounded-lg"
                 />
+                {(c.handle || c.result) && (
+                  <div className="text-center mt-1">
+                    {c.handle && (
+                      <p className="text-white font-semibold text-[13px] md:text-sm">
+                        {c.handle}
+                      </p>
+                    )}
+                    {c.result && (
+                      <p className="text-[#4ade80] text-[12px] md:text-[13px] mt-0.5 leading-tight">
+                        {c.result}
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}

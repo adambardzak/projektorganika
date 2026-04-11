@@ -35,14 +35,21 @@ export default function Home() {
           3denní online trénink pro experty ve zdraví. Bez trendů, bez strašení — krok za krokem.
         </p>
 
-        {/* Hero Mockup */}
+        {/* Hero VSL Video */}
         <div className="mt-5 md:mt-10 w-full max-w-[720px] relative">
           <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.12)_0%,transparent_65%)] pointer-events-none" />
-          <img
-            src={MOCKUP}
-            alt="Projekt Organika — ukázka tréninku"
-            className="relative w-full h-auto rounded-xl md:rounded-2xl"
-          />
+          <div className="relative rounded-xl md:rounded-2xl overflow-hidden border border-[#1a2a1b] bg-[#0e160f] shadow-[0_0_60px_rgba(74,222,128,0.08)]">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/vsl-poster.webp"
+              className="w-full h-auto aspect-video"
+            >
+              <source src="/vsl.mp4" type="video/mp4" />
+              Tvůj prohlížeč nepodporuje přehrávání videa.
+            </video>
+          </div>
         </div>
 
         {/* Social proof — author card + rating pill */}
@@ -316,9 +323,19 @@ export default function Home() {
       {/* ==================== 3 DAY BREAKDOWN ==================== */}
       <section id="jak-to-funguje" className="px-6 py-16 md:py-32">
         <div className="max-w-[600px] md:max-w-[820px] mx-auto">
-          <div className="text-center mb-10 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
             <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-3">Co získáš</div>
             <h2 className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]">3 dny, 3 jasné výstupy.</h2>
+          </div>
+
+          {/* Course content preview */}
+          <div className="mb-12 md:mb-16 relative">
+            <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.08)_0%,transparent_65%)] pointer-events-none" />
+            <img
+              src={MOCKUP}
+              alt="Ukázka obsahu tréninku Projekt Organika"
+              className="relative w-full h-auto rounded-xl md:rounded-2xl"
+            />
           </div>
 
           <div className="flex flex-col items-center">
@@ -517,7 +534,7 @@ export default function Home() {
 
         <div className="max-w-[900px] mx-auto mt-12 md:mt-20 text-center py-6 md:py-8 border-t border-[#1a2a1b]">
           <p className="text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-            6 účtů z 0 na 10K+. 20 000 000+ zhlédnutí.
+            6 účtů z 0 na 10K+. 30 000 000+ zhlédnutí.
           </p>
           <p className="text-base md:text-lg text-[#9cb89c] mt-2">
             Stovky klientů pro mé klienty. <span className="text-[#4ade80]">0 Kč do reklamy.</span>
@@ -542,26 +559,38 @@ export default function Home() {
               {
                 before: "/img/case-studies/vermione-pred.webp",
                 after: "/img/case-studies/vermione-po.webp",
+                handle: "@vermionekremy",
+                result: "Z 0 na 10K+ sledujících",
               },
               {
                 before: "/img/case-studies/celiso-pred.webp",
                 after: "/img/case-studies/celiso-po.webp",
+                handle: "@celiso.cz",
+                result: "30 000+ sledujících",
               },
               {
                 before: "/img/case-studies/martin-pred.webp",
                 after: "/img/case-studies/martin-po.webp",
+                handle: "@jidlosmartinem",
+                result: "Z 0 na 10K+ sledujících",
               },
               {
                 before: "/img/case-studies/gabi-pred.webp",
                 after: "/img/case-studies/gabi-po.webp",
+                handle: "@zmenasgabi",
+                result: "Nový účet s rychlým růstem",
               },
               {
                 before: "/img/case-studies/mitolife-pred.webp",
                 after: "/img/case-studies/mitrolife-po.webp",
+                handle: "@mitolife",
+                result: "5 000+ sledujících",
               },
               {
                 before: "/img/case-studies/sober-pred-1-1.webp",
                 after: "/img/case-studies/sober-po.webp",
+                handle: "@soberboys.pl",
+                result: "Z 0 na tisíce sledujících",
               },
             ]}
           />
@@ -595,9 +624,24 @@ export default function Home() {
               />
             </svg>
           </h2>
-          <p className="text-[#4ade80] font-medium text-sm md:text-base mb-5 md:mb-6">
+          <p className="text-[#4ade80] font-medium text-sm md:text-base mb-3 md:mb-4">
             Expert na sociální sítě ve zdraví
           </p>
+
+          <a
+            href="https://instagram.com/socialmaty"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 mb-5 md:mb-6 px-3.5 py-2 rounded-full border border-[#1a2a1b] bg-[#0e160f]/60 hover:border-[#2a4a2a] transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            <span className="text-white font-semibold text-[13px] md:text-sm">@socialmaty</span>
+            <span className="text-[#6b8a6b] text-[12px] md:text-[13px]">· sleduj na Instagramu</span>
+          </a>
 
           <div className="space-y-4 text-[#c5d8c5] leading-relaxed text-[15px] md:text-lg">
             <p>
@@ -607,7 +651,7 @@ export default function Home() {
               Začal jsem znovu. Vzal jsem všechno, co jsem se naučil o sociálních sítích, a začal systematicky budovat profily pro experty ve zdraví.
             </p>
             <p className="text-white font-medium">
-              Za poslední rok: 6 účtů z nuly na 10 000+ sledujících. 20 milionů organických zhlédnutí. Desítky klientů pro každého. 0 Kč do reklamy.
+              Za poslední rok: 6 účtů z nuly na 10 000+ sledujících. 30 milionů organických zhlédnutí. Desítky klientů pro každého. 0 Kč do reklamy.
             </p>
           </div>
 
