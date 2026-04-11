@@ -49,3 +49,127 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #253525;
 }
+
+/* FAQ <details>/<summary> — remove default marker on all browsers incl. iOS Safari */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary::marker {
+  content: "";
+}
+
+/* ==================== SCROLL REVEAL ==================== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal-delay="1"].is-visible {
+  transition-delay: 0.08s;
+}
+[data-reveal-delay="2"].is-visible {
+  transition-delay: 0.16s;
+}
+[data-reveal-delay="3"].is-visible {
+  transition-delay: 0.24s;
+}
+[data-reveal-delay="4"].is-visible {
+  transition-delay: 0.32s;
+}
+
+/* ==================== AMBIENT ANIMATIONS ==================== */
+@keyframes organika-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+.anim-breathe {
+  animation: organika-breathe 9s ease-in-out infinite;
+}
+
+@keyframes organika-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.anim-float {
+  animation: organika-float 7s ease-in-out infinite;
+}
+
+@keyframes organika-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(74, 222, 128, 0.25),
+      0 0 45px rgba(74, 222, 128, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(74, 222, 128, 0.5),
+      0 0 70px rgba(74, 222, 128, 0.32);
+  }
+}
+.anim-glow {
+  animation: organika-glow 3.4s ease-in-out infinite;
+}
+
+@keyframes organika-shimmer {
+  0% {
+    transform: translateX(-120%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-12deg);
+  }
+}
+.anim-shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 100%
+  );
+  transform: translateX(-120%) skewX(-12deg);
+  animation: organika-shimmer 3.8s ease-in-out infinite;
+  animation-delay: 1.5s;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .anim-breathe,
+  .anim-float,
+  .anim-glow,
+  .anim-shimmer::before {
+    animation: none;
+  }
+}

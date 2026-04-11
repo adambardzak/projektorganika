@@ -2,6 +2,7 @@ import { Header } from "./Header";
 import { StickyCta } from "./StickyCta";
 import { CaseStudiesCarousel } from "./CaseStudiesCarousel";
 import { Wordmark } from "./Wordmark";
+import { ScrollReveal } from "./ScrollReveal";
 
 export default function Home() {
   const CTA_LINK = "https://buy.stripe.com/00w28k0i6fn9esUaH5e3e00";
@@ -19,25 +20,37 @@ export default function Home() {
     <main id="top" className="min-h-screen overflow-x-hidden relative pb-20 md:pb-0">
       <Header />
       <StickyCta ctaLink={CTA_LINK} />
+      <ScrollReveal />
 
       {/* ==================== HERO ==================== */}
       <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-28 md:pt-28 pb-8 md:pb-20">
-        <p className="text-[#e2a84b] font-medium text-[12px] md:text-lg mb-2 md:mb-6 tracking-wide text-center">
+        <p
+          data-reveal
+          className="text-[#e2a84b] font-medium text-[12px] md:text-lg mb-2 md:mb-6 tracking-wide text-center"
+        >
           Podnikáš ve zdraví a Instagram tě ignoruje?
         </p>
 
-        <h1 className="text-center max-w-[860px] font-bold leading-[1.05] tracking-tight text-[1.875rem] sm:text-[2.25rem] md:text-[3.75rem]">
+        <h1
+          data-reveal
+          data-reveal-delay="1"
+          className="text-center max-w-[860px] font-bold leading-[1.05] tracking-tight text-[1.875rem] sm:text-[2.25rem] md:text-[3.75rem]"
+        >
           Z 0 na <span className="text-[#4ade80]">10&nbsp;000+ sledujících</span> a{" "}
           <span className="text-[#4ade80]">20 klientů</span> za 40 dnů.
         </h1>
 
-        <p className="mt-3 md:mt-6 text-center text-[14px] md:text-lg text-[#9cb89c] max-w-[560px] leading-snug">
+        <p
+          data-reveal
+          data-reveal-delay="2"
+          className="mt-3 md:mt-6 text-center text-[14px] md:text-lg text-[#9cb89c] max-w-[560px] leading-snug"
+        >
           3denní online trénink pro experty ve zdraví. Bez trendů, bez strašení — krok za krokem.
         </p>
 
         {/* Hero VSL Video */}
-        <div className="mt-5 md:mt-10 w-full max-w-[720px] relative">
-          <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.12)_0%,transparent_65%)] pointer-events-none" />
+        <div data-reveal data-reveal-delay="3" className="mt-5 md:mt-10 w-full max-w-[720px] relative">
+          <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.12)_0%,transparent_65%)] pointer-events-none anim-breathe" />
           <div className="relative rounded-xl md:rounded-2xl overflow-hidden border border-[#1a2a1b] bg-[#0e160f] shadow-[0_0_60px_rgba(74,222,128,0.08)]">
             <video
               controls
@@ -132,7 +145,8 @@ export default function Home() {
 
         <a
           href={CTA_LINK}
-          className="mt-5 md:mt-10 w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-[15px] md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
+          data-reveal
+          className="relative overflow-hidden anim-shimmer mt-5 md:mt-10 w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-[15px] md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
         >
           CHCI SYSTÉM ZA 990 KČ
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -147,7 +161,7 @@ export default function Home() {
 
       {/* ==================== BIG STATS STRIP ==================== */}
       <section className="relative z-10 py-10 md:py-16 border-y border-[#1a2a1b]/60 overflow-hidden">
-        <div className="max-w-[900px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div data-reveal className="max-w-[900px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {[
             { num: "6", label: "účtů z 0 na 10K+" },
             { num: "30M+", label: "organických zhlédnutí" },
@@ -165,11 +179,14 @@ export default function Home() {
       {/* ==================== PAIN POINTS ==================== */}
       <section className="px-6 py-16 md:py-32">
         <div className="max-w-[600px] md:max-w-[1100px] mx-auto">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-10 md:mb-16 text-2xl md:text-[2.5rem]">
+          <h2
+            data-reveal
+            className="font-bold leading-tight tracking-tight text-center mb-10 md:mb-16 text-2xl md:text-[2.5rem]"
+          >
             Tohle znáš, že?
           </h2>
 
-          <div className="md:grid md:grid-cols-[1fr_1.2fr] md:gap-12 lg:gap-16 md:items-center">
+          <div data-reveal className="md:grid md:grid-cols-[1fr_1.2fr] md:gap-12 lg:gap-16 md:items-center">
             <img
               src="/sad.webp"
               alt=""
@@ -205,11 +222,14 @@ export default function Home() {
       <section className="px-6 py-16 md:py-32 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(20,60,20,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="max-w-[600px] md:max-w-[1100px] mx-auto relative z-10">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-16 text-2xl md:text-[2.5rem]">
+          <h2
+            data-reveal
+            className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-16 text-2xl md:text-[2.5rem]"
+          >
             Tohle můžeš být <span className="text-[#4ade80]">TY:</span>
           </h2>
 
-          <div className="md:grid md:grid-cols-[1.2fr_1fr] md:gap-12 lg:gap-16 md:items-center">
+          <div data-reveal className="md:grid md:grid-cols-[1.2fr_1fr] md:gap-12 lg:gap-16 md:items-center">
             <img
               src="/happy.webp"
               alt=""
@@ -240,14 +260,17 @@ export default function Home() {
           </div>
 
           <div className="max-w-[600px] md:max-w-[720px] mx-auto mt-16 md:mt-24 text-center">
-            <h3 className="font-bold leading-tight tracking-tight text-xl md:text-[2rem]">
+            <h3
+              data-reveal
+              className="font-bold leading-tight tracking-tight text-xl md:text-[2rem]"
+            >
               Převezmi ověřený &bdquo;Growmat&ldquo; systém.
             </h3>
             <p className="mt-5 md:mt-6 text-[#c5d8c5] text-[15px] md:text-lg leading-relaxed">
               3-fázový systém, který proměňuje <strong className="text-white">neviditelné experty v autority se stabilním přísunem klientů.</strong>
             </p>
 
-            <div className="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 border-y border-[#1a2a1b]/60 py-10 md:py-12">
+            <div data-reveal className="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 border-y border-[#1a2a1b]/60 py-10 md:py-12">
               {[
                 {
                   icon: (
@@ -325,12 +348,17 @@ export default function Home() {
         <div className="max-w-[600px] md:max-w-[820px] mx-auto">
           <div className="text-center mb-8 md:mb-12">
             <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-3">Co získáš</div>
-            <h2 className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]">3 dny, 3 jasné výstupy.</h2>
+            <h2
+              data-reveal
+              className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]"
+            >
+              3 dny, 3 jasné výstupy.
+            </h2>
           </div>
 
           {/* Course content preview */}
-          <div className="mb-12 md:mb-16 relative">
-            <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.08)_0%,transparent_65%)] pointer-events-none" />
+          <div data-reveal className="mb-12 md:mb-16 relative">
+            <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.08)_0%,transparent_65%)] pointer-events-none anim-breathe" />
             <img
               src={MOCKUP}
               alt="Ukázka obsahu tréninku Projekt Organika"
@@ -377,7 +405,12 @@ export default function Home() {
                 ],
               },
             ].map((d, i) => (
-              <div key={d.num} className="w-full flex flex-col items-center">
+              <div
+                key={d.num}
+                data-reveal
+                data-reveal-delay={String(i + 1)}
+                className="w-full flex flex-col items-center"
+              >
                 <span className="text-3xl md:text-4xl font-bold text-[#4ade80]/20 mb-3">{d.num}</span>
 
                 <div className="w-full rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
@@ -420,14 +453,21 @@ export default function Home() {
       <section id="bonusy" className="px-6 py-16 md:py-32 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(20,60,20,0.05)_0%,transparent_50%)] pointer-events-none" />
         <div className="max-w-[600px] md:max-w-[820px] mx-auto relative z-10">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]">
+          <h2
+            data-reveal
+            className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]"
+          >
             + 7 bonusů navíc
           </h2>
-          <p className="text-center text-[15px] md:text-lg text-[#9cb89c] mb-10 md:mb-14">
+          <p
+            data-reveal
+            data-reveal-delay="1"
+            className="text-center text-[15px] md:text-lg text-[#9cb89c] mb-10 md:mb-14"
+          >
             Vše je součástí Projektu Organika.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+          <div data-reveal className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
             {[
               {
                 n: "01",
@@ -511,15 +551,22 @@ export default function Home() {
       {/* ==================== SOCIAL PROOF ==================== */}
       <section id="recenze" className="px-4 md:px-6 py-16 md:py-32">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]">
+          <h2
+            data-reveal
+            className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]"
+          >
             Tohle nejsou sliby.
           </h2>
-          <p className="text-center text-lg md:text-2xl font-semibold text-[#4ade80] mb-8 md:mb-12">
+          <p
+            data-reveal
+            data-reveal-delay="1"
+            className="text-center text-lg md:text-2xl font-semibold text-[#4ade80] mb-8 md:mb-12"
+          >
             Tohle jsou čísla.
           </p>
 
           {/* Text testimonials */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+          <div data-reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
             {[RECENZE_1, RECENZE_2, RECENZE_3, RECENZE_4, RECENZE_5, RECENZE_6, RECENZE_7].map((src, i) => (
               <img
                 key={i}
@@ -549,7 +596,10 @@ export default function Home() {
             <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-3">
               Případové studie
             </div>
-            <h2 className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]">
+            <h2
+              data-reveal
+              className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]"
+            >
               Jak to vypadá v praxi
             </h2>
           </div>
@@ -602,9 +652,9 @@ export default function Home() {
         <div className="max-w-[600px] md:max-w-[800px] mx-auto">
           <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-4">Kdo za tím stojí?</div>
 
-          <img src="/img/maty.webp" alt="Matyáš Linda" className="w-full md:float-left md:w-56 md:mr-8 md:mb-4 rounded-2xl mb-6 object-cover object-[center_20%] max-h-[300px] md:max-h-[320px]" />
+          <img data-reveal src="/img/maty.webp" alt="Matyáš Linda" className="w-full md:float-left md:w-56 md:mr-8 md:mb-4 rounded-2xl mb-6 object-cover object-[center_20%] max-h-[300px] md:max-h-[320px]" />
 
-          <h2 className="flex items-center gap-2.5 font-bold text-2xl md:text-3xl mb-2">
+          <h2 data-reveal data-reveal-delay="1" className="flex items-center gap-2.5 font-bold text-2xl md:text-3xl mb-2">
             Matyáš Linda
             <svg
               width="22"
@@ -676,7 +726,7 @@ export default function Home() {
           </div>
 
           {/* Value breakdown */}
-          <div className="mt-8 md:mt-10 rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
+          <div data-reveal className="mt-8 md:mt-10 rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
             <p className="text-[10px] md:text-xs tracking-wider uppercase text-[#4ade80] font-medium mb-4">
               3denní trénink · 14 970 Kč
             </p>
@@ -730,7 +780,7 @@ export default function Home() {
           </div>
 
           {/* Price card */}
-          <div className="mt-6 md:mt-8 rounded-2xl border border-[#4ade80]/30 bg-[#0e160f] p-6 md:p-12 text-center relative overflow-hidden">
+          <div data-reveal data-reveal-delay="1" className="mt-6 md:mt-8 rounded-2xl border border-[#4ade80]/30 bg-[#0e160f] p-6 md:p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4ade80]/50 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4ade80]/20 to-transparent" />
 
@@ -751,7 +801,7 @@ export default function Home() {
             <div className="mt-5 md:mt-8">
               <a
                 href={CTA_LINK}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
+                className="relative overflow-hidden anim-shimmer w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
               >
                 VSTOUPIT ZA 990 KČ
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -770,11 +820,14 @@ export default function Home() {
       {/* ==================== FAQ ==================== */}
       <section id="faq" className="px-6 py-16 md:py-32">
         <div className="max-w-[600px] md:max-w-[700px] mx-auto">
-          <h2 className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-14 text-2xl md:text-[2.5rem]">
+          <h2
+            data-reveal
+            className="font-bold leading-tight tracking-tight text-center mb-8 md:mb-14 text-2xl md:text-[2.5rem]"
+          >
             Nejčastější otázky
           </h2>
 
-          <div className="divide-y divide-[#1a2a1b]">
+          <div data-reveal data-reveal-delay="1" className="divide-y divide-[#1a2a1b]">
             {[
               {
                 q: "Čím je tohle jiné od jiných kurzů?",
@@ -823,9 +876,11 @@ export default function Home() {
       <section className="px-6 py-16 md:py-32 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(74,222,128,0.03)_0%,transparent_50%)] pointer-events-none" />
         <div className="max-w-[500px] md:max-w-[700px] mx-auto relative z-10 text-center">
-          <h2 className="font-bold leading-tight tracking-tight mb-6 md:mb-8 text-xl md:text-[2rem]">Máš 2 možnosti:</h2>
+          <h2 data-reveal className="font-bold leading-tight tracking-tight mb-6 md:mb-8 text-xl md:text-[2rem]">
+            Máš 2 možnosti:
+          </h2>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 text-left mb-8 md:mb-12">
+          <div data-reveal data-reveal-delay="1" className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 text-left mb-8 md:mb-12">
             <div className="rounded-xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-6">
               <p className="text-xs text-[#6b8a6b] font-medium mb-2">Možnost 1</p>
               <p className="text-[#9cb89c] leading-relaxed text-sm md:text-base">
@@ -842,14 +897,19 @@ export default function Home() {
 
           <div className="w-12 h-px bg-[#4ade80]/40 mx-auto mb-6 md:mb-8" />
 
-          <h3 className="font-bold leading-tight mb-8 md:mb-10 text-lg md:text-[2rem]">
+          <h3
+            data-reveal
+            className="font-bold leading-tight mb-8 md:mb-10 text-lg md:text-[2rem]"
+          >
             Tvoje expertiza si zaslouží být vidět.{" "}
             <span className="text-[#4ade80]">Dej jí systém.</span>
           </h3>
 
           <a
             href={CTA_LINK}
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
+            data-reveal
+            data-reveal-delay="1"
+            className="relative overflow-hidden anim-shimmer w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
           >
             ZAČÍT TEĎ ZA 990 KČ
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
