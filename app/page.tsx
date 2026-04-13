@@ -614,7 +614,7 @@ export default function Home() {
               },
               {
                 before: "/img/case-studies/celiso-pred.webp",
-                after: "/img/case-studies/celiso-po.webp",
+                after: "/img/case-studies/celiso-po-1.webp",
                 handle: "@celiso.cz",
                 result: "30 000+ sledujících",
               },
@@ -632,15 +632,29 @@ export default function Home() {
               },
               {
                 before: "/img/case-studies/mitolife-pred.webp",
-                after: "/img/case-studies/mitrolife-po.webp",
+                after: "/img/case-studies/mito-po.webp",
                 handle: "@mitolife",
                 result: "5 000+ sledujících",
               },
               {
                 before: "/img/case-studies/sober-pred-1-1.webp",
-                after: "/img/case-studies/sober-po.webp",
+                after: "/img/case-studies/sober-boys-po.webp",
                 handle: "@soberboys.pl",
                 result: "Z 0 na tisíce sledujících",
+              },
+              {
+                before: "/img/case-studies/socialmaty-pred-1.webp",
+                after: "/img/case-studies/maty-po.webp",
+                handle: "@socialmaty",
+                result: "Vlastní účet Matyáše",
+              },
+              {
+                after: "/img/case-studies/marie-po.webp",
+                handle: "@marie",
+              },
+              {
+                after: "/img/case-studies/vasek-po.webp",
+                handle: "@vasek",
               },
             ]}
           />

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 type CaseStudy = {
-  before: string;
+  before?: string;
   after: string;
   handle?: string;
   result?: string;
@@ -90,31 +90,35 @@ export function CaseStudiesCarousel({ cases }: { cases: CaseStudy[] }) {
               className="snap-center shrink-0 w-[75vw] max-w-[300px] md:w-[300px]"
             >
               <div className="flex flex-col items-center gap-3">
-                <img
-                  src={c.before}
-                  alt="Před"
-                  loading="lazy"
-                  className="w-full rounded-lg"
-                />
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="shrink-0"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12 5v14M6 13l6 6 6-6"
-                    stroke="#4ade80"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                {c.before && (
+                  <>
+                    <img
+                      src={c.before}
+                      alt="Před"
+                      loading="lazy"
+                      className="w-full rounded-lg"
+                    />
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="shrink-0"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 5v14M6 13l6 6 6-6"
+                        stroke="#4ade80"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </>
+                )}
                 <img
                   src={c.after}
-                  alt="Po"
+                  alt={c.before ? "Po" : "Screenshot účtu"}
                   loading="lazy"
                   className="w-full rounded-lg"
                 />

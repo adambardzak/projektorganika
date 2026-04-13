@@ -5,12 +5,12 @@ import { join, parse } from "node:path";
 const PUBLIC_DIR = new URL("../public/", import.meta.url).pathname;
 const OUT_DIR = join(PUBLIC_DIR, "img");
 
-// [relativeSourceDir, outputSubdir, maxWidth, quality]
+// [relativeSourceDir, outputSubdir, maxWidth, quality, options?]
 const jobs = [
   ["LANDING PAGE GRAFIKA", "grafika", 1600, 82],
   ["LANDING PAGE VÝSLEDKY", "vysledky", 1100, 80],
   ["RECENZE TEXT", "recenze", 900, 80],
-  ["img/predapo", "case-studies", 800, 80],
+  ["img/predapo", "case-studies", 800, 80, { trim: true }],
   ["img/sklienty", "s-klienty", 900, 82],
 ];
 
@@ -28,16 +28,19 @@ function slugify(name) {
     .replace(/^-+|-+$/g, "");
 }
 
-async function convertFile(src, dest, maxWidth, quality) {
-  const img = sharp(src, { failOn: "none" });
-  const meta = await img.metadata();
+async function convertFile(src, dest, maxWidth, quality, opts = {}) {
+  let pipeline = sharp(src, { failOn: "none" }).rotate();
+  if (opts.trim) {
+    // Flatten transparency onto white before trimming so PNG alpha
+    // edges are treated the same as white padding.
+    pipeline = pipeline
+      .flatten({ background: "#ffffff" })
+      .trim({ threshold: 15 });
+  }
+  const meta = await pipeline.clone().metadata();
   const resize =
     meta.width && meta.width > maxWidth ? { width: maxWidth } : undefined;
-  await img
-    .rotate()
-    .resize(resize)
-    .webp({ quality, effort: 5 })
-    .toFile(dest);
+  await pipeline.resize(resize).webp({ quality, effort: 5 }).toFile(dest);
   const srcStat = await stat(src);
   const destStat = await stat(dest);
   return { srcSize: srcStat.size, destSize: destStat.size };
@@ -48,7 +51,7 @@ async function run() {
   let totalIn = 0;
   let totalOut = 0;
 
-  for (const [srcDir, outSub, maxWidth, quality] of jobs) {
+  for (const [srcDir, outSub, maxWidth, quality, opts] of jobs) {
     const srcPath = join(PUBLIC_DIR, srcDir);
     const outPath = join(OUT_DIR, outSub);
     let entries;
@@ -75,6 +78,7 @@ async function run() {
           dest,
           maxWidth,
           quality,
+          opts,
         );
         totalIn += srcSize;
         totalOut += destSize;
