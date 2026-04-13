@@ -23,7 +23,7 @@ export default function Home() {
       <ScrollReveal />
 
       {/* ==================== HERO ==================== */}
-      <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-28 md:pt-28 pb-8 md:pb-20">
+      <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-24 md:pt-28 pb-6 md:pb-20">
         <p
           data-reveal
           className="text-[#e2a84b] font-medium text-[12px] md:text-lg mb-2 md:mb-6 tracking-wide text-center"
@@ -43,13 +43,13 @@ export default function Home() {
         <p
           data-reveal
           data-reveal-delay="2"
-          className="mt-3 md:mt-6 text-center text-[14px] md:text-lg text-[#9cb89c] max-w-[560px] leading-snug"
+          className="mt-2 md:mt-6 text-center text-[14px] md:text-lg text-[#9cb89c] max-w-[560px] leading-snug"
         >
           3denní online trénink pro experty ve zdraví. Bez trendů, bez strašení — krok za krokem.
         </p>
 
         {/* Hero VSL Video */}
-        <div data-reveal data-reveal-delay="3" className="mt-5 md:mt-10 w-full max-w-[720px] relative">
+        <div data-reveal data-reveal-delay="3" className="mt-4 md:mt-10 w-full max-w-[720px] relative">
           <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.12)_0%,transparent_65%)] pointer-events-none anim-breathe" />
           <div className="relative rounded-xl md:rounded-2xl overflow-hidden border border-[#1a2a1b] bg-[#0e160f] shadow-[0_0_60px_rgba(74,222,128,0.08)]">
             <video
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Social proof — author card + rating pill */}
-        <div className="mt-5 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 md:gap-8">
+        <div className="mt-4 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 md:gap-8">
           {/* Author card */}
           <div className="flex items-center gap-3">
             <img
@@ -139,14 +139,14 @@ export default function Home() {
         </div>
 
         {/* Views sub-line */}
-        <p className="mt-4 md:mt-5 text-[13px] md:text-base text-[#9cb89c]">
+        <p className="mt-3 md:mt-5 text-[13px] md:text-base text-[#9cb89c]">
           <span className="text-white font-bold text-[15px] md:text-lg">30M+</span> organických zhlédnutí
         </p>
 
         <a
           href={CTA_LINK}
           data-reveal
-          className="relative overflow-hidden anim-shimmer mt-5 md:mt-10 w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-[15px] md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
+          className="relative overflow-hidden anim-shimmer mt-4 md:mt-10 w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-[15px] md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
         >
           CHCI SYSTÉM ZA 990 KČ
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
