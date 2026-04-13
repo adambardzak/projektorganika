@@ -14,6 +14,26 @@ export const metadata: Metadata = {
   title: "Projekt Organika™ — Systém pro experty ve zdraví",
   description:
     "3denní online trénink pro experty ve zdraví. Získej systém, díky kterému experti získali z 0 na 10 000+ sledujících a 20+ klientů za 40 dnů. Bez reklam. Bez agentury. Jen přes telefon.",
+  metadataBase: new URL("https://projektorganika.cz"),
+  openGraph: {
+    title: "Projekt Organika™ — Systém pro experty ve zdraví",
+    description:
+      "3denní online trénink: z 0 na 10 000+ sledujících a 20 klientů za 40 dnů. Bez reklam. Krok za krokem.",
+    url: "https://projektorganika.cz",
+    siteName: "Projekt Organika™",
+    locale: "cs_CZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projekt Organika™ — Systém pro experty ve zdraví",
+    description:
+      "3denní online trénink: z 0 na 10 000+ sledujících a 20 klientů za 40 dnů. Bez reklam. Krok za krokem.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
