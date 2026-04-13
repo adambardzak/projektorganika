@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
           Zásady ochrany osobních údajů
         </h1>
         <p className="text-sm text-[#7a8a7a] mb-10">
-          Poslední aktualizace: [DOPLNIT DATUM]
+          Poslední aktualizace: 13. dubna 2026
         </p>
 
         <div className="space-y-8 text-[#c8d6c8] leading-relaxed">
@@ -37,11 +37,11 @@ export default function PrivacyPolicy() {
             <p>
               <strong>Matyáš Linda</strong>
               <br />
-              IČO: [DOPLNIT]
+              IČO: 14275589
               <br />
-              Sídlo: [DOPLNIT]
+              Sídlo: Velké Popovice 502, 251 69 Velké Popovice
               <br />
-              Email: [DOPLNIT]
+              Email: linmat.7@gmail.com
             </p>
           </section>
 
@@ -121,7 +121,7 @@ export default function PrivacyPolicy() {
                 )
               </li>
             </ul>
-            <p>Pro uplatnění práv nás kontaktuj na [EMAIL].</p>
+            <p>Pro uplatnění práv nás kontaktuj na linmat.7@gmail.com.</p>
           </section>
         </div>
       </section>
