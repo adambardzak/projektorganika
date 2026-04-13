@@ -77,7 +77,7 @@ export function Analytics() {
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('consent', 'grant');
-            fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID || "PIXEL_ID_HERE"}');
+            fbq('init', '1295454135154438');
             fbq('track', 'PageView');
           `}
         </Script>
