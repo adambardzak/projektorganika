@@ -387,12 +387,12 @@ export default function Home() {
                 num: "03",
                 day: "Den 3",
                 value: "5 990 Kč",
-                title: "Kompletní mapa od 0 po stabilní příjem",
-                subtitle: "3-fázový Growmat systém — 1–2 hodiny denně.",
+                title: "Kompletní systém obsahu na celý týden",
+                subtitle: "Hotový systém, jak si naplánovat obsah na 1–2 týdny dopředu — bez stresu a bez nekonečného vymýšlení.",
                 bullets: [
-                  <><strong className="text-white">Fáze 1: Viditelnost</strong> — prvních pár set sledujících</>,
-                  <><strong className="text-white">Fáze 2: Důvěra</strong> — komunita, která ti věří</>,
-                  <><strong className="text-white">Fáze 3: Klienti</strong> + plán na 2 týdny dopředu</>,
+                  <><strong className="text-white">Kompletní Growmat systém &bdquo;od příspěvku po delegaci&ldquo;</strong> — 3 reálné případové studie pod pokličkou, abys viděl/a, že to funguje i pro experty ve zdraví</>,
+                  <><strong className="text-white">Jasný plán obsahu na celý týden</strong> — budeš přesně vědět, co sdílet, v jakém formátu a proč to funguje</>,
+                  <><strong className="text-white">Dárek v hodnotě 10 000 Kč</strong> + možnost mentoringu 1:1 zdarma — abys měl/a jistotu, že v tom nezůstaneš sám/a</>,
                 ],
               },
             ].map((d, i) => (
