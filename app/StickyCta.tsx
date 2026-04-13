@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { TrackedCtaLink } from "./TrackedCtaLink";
 
 export function StickyCta({ ctaLink }: { ctaLink: string }) {
   const [showStickyCta, setShowStickyCta] = useState(false);
@@ -32,7 +33,7 @@ export function StickyCta({ ctaLink }: { ctaLink: string }) {
           : "translate-y-full opacity-0 pointer-events-none"
       }`}
     >
-      <a
+      <TrackedCtaLink
         href={ctaLink}
         className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 text-[15px] font-bold text-white shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
       >
@@ -46,7 +47,7 @@ export function StickyCta({ ctaLink }: { ctaLink: string }) {
             strokeLinejoin="round"
           />
         </svg>
-      </a>
+      </TrackedCtaLink>
     </div>
   );
 }

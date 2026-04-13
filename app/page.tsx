@@ -3,6 +3,7 @@ import { StickyCta } from "./StickyCta";
 import { CaseStudiesCarousel } from "./CaseStudiesCarousel";
 import { Wordmark } from "./Wordmark";
 import { ScrollReveal } from "./ScrollReveal";
+import { TrackedCtaLink } from "./TrackedCtaLink";
 
 export default function Home() {
   const CTA_LINK = "https://buy.stripe.com/00w28k0i6fn9esUaH5e3e00";
@@ -143,7 +144,7 @@ export default function Home() {
           <span className="text-white font-bold text-[15px] md:text-lg">30M+</span> organických zhlédnutí
         </p>
 
-        <a
+        <TrackedCtaLink
           href={CTA_LINK}
           data-reveal
           className="relative overflow-hidden anim-shimmer mt-4 md:mt-10 w-full md:w-auto flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-[15px] md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
@@ -152,7 +153,7 @@ export default function Home() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </a>
+        </TrackedCtaLink>
 
         <p className="mt-2.5 text-[10px] md:text-xs text-[#6b8a6b] flex items-center gap-2 md:gap-3">
           <span>🔒 Bezpečná platba</span><span>·</span><span>Okamžitý přístup</span><span>·</span><span>Doživotně</span>
@@ -330,7 +331,7 @@ export default function Home() {
               ))}
             </div>
 
-            <a
+            <TrackedCtaLink
               href={CTA_LINK}
               className="mt-8 md:mt-12 w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
@@ -338,7 +339,7 @@ export default function Home() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </TrackedCtaLink>
           </div>
         </div>
       </section>
@@ -436,7 +437,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8 md:mt-10">
-            <a
+            <TrackedCtaLink
               href={CTA_LINK}
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
@@ -444,7 +445,7 @@ export default function Home() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </TrackedCtaLink>
           </div>
         </div>
       </section>
@@ -535,7 +536,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-6 md:mt-8">
-            <a
+            <TrackedCtaLink
               href={CTA_LINK}
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
@@ -543,7 +544,7 @@ export default function Home() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </TrackedCtaLink>
           </div>
         </div>
       </section>
@@ -813,7 +814,7 @@ export default function Home() {
             </div>
 
             <div className="mt-5 md:mt-8">
-              <a
+              <TrackedCtaLink
                 href={CTA_LINK}
                 className="relative overflow-hidden anim-shimmer w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
               >
@@ -821,7 +822,7 @@ export default function Home() {
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </TrackedCtaLink>
             </div>
 
             <p className="mt-3 text-[11px] md:text-xs text-[#6b8a6b] flex items-center justify-center gap-2 md:gap-3">
@@ -919,7 +920,7 @@ export default function Home() {
             <span className="text-[#4ade80]">Dej jí systém.</span>
           </h3>
 
-          <a
+          <TrackedCtaLink
             href={CTA_LINK}
             data-reveal
             data-reveal-delay="1"
@@ -929,7 +930,7 @@ export default function Home() {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </a>
+          </TrackedCtaLink>
 
           <p className="mt-3 text-[11px] md:text-xs text-[#6b8a6b] flex items-center justify-center gap-2 md:gap-3">
             <span>🔒 Bezpečná platba</span><span>·</span><span>Okamžitý přístup</span><span>·</span><span>Doživotní členství</span>
