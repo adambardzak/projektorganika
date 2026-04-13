@@ -64,6 +64,19 @@ export function Analytics() {
         </>
       )}
 
+      {/* Microsoft Clarity — only when analytics consent is granted */}
+      {consent?.analytics && (
+        <Script id="clarity-init" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "wb5vvpn7y7");
+          `}
+        </Script>
+      )}
+
       {/* Meta Pixel — only when marketing consent is granted */}
       {consent?.marketing && (
         <Script id="meta-pixel-init" strategy="afterInteractive">
