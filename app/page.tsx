@@ -4,6 +4,7 @@ import { CaseStudiesCarousel } from "./CaseStudiesCarousel";
 import { Wordmark } from "./Wordmark";
 import { ScrollReveal } from "./ScrollReveal";
 import { TrackedCtaLink } from "./TrackedCtaLink";
+import { HeroVideo } from "./HeroVideo";
 
 export default function Home() {
   const CTA_LINK = "https://buy.stripe.com/00w28k0i6fn9esUaH5e3e00";
@@ -52,18 +53,7 @@ export default function Home() {
         {/* Hero VSL Video */}
         <div data-reveal data-reveal-delay="3" className="mt-4 md:mt-10 w-full max-w-[720px] relative">
           <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.12)_0%,transparent_65%)] pointer-events-none anim-breathe" />
-          <div className="relative rounded-xl md:rounded-2xl overflow-hidden border border-[#1a2a1b] bg-[#0e160f] shadow-[0_0_60px_rgba(74,222,128,0.08)]">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster="/vsl-poster.webp"
-              className="w-full h-auto aspect-video"
-            >
-              <source src="/vsl.mp4" type="video/mp4" />
-              Tvůj prohlížeč nepodporuje přehrávání videa.
-            </video>
-          </div>
+          <HeroVideo />
         </div>
 
         {/* Social proof — author card + rating pill */}
