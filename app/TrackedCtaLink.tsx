@@ -10,11 +10,12 @@ export function TrackedCtaLink({ href, onClick, children, ...rest }: Props) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     onClick?.(e);
 
-    // Fire-and-forget — don't block navigation
+    // Meta Pixel — fire-and-forget
     if (typeof window.fbq === "function") {
       window.fbq("track", "InitiateCheckout");
     }
 
+    // GA4 via gtag
     if (typeof window.gtag === "function") {
       window.gtag("event", "begin_checkout", {
         currency: "CZK",
@@ -22,7 +23,7 @@ export function TrackedCtaLink({ href, onClick, children, ...rest }: Props) {
       });
     }
 
-    // Let the browser navigate normally (no preventDefault)
+    // Let the browser navigate normally
   };
 
   return (
