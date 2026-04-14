@@ -7,7 +7,7 @@ import { TrackedCtaLink } from "./TrackedCtaLink";
 import { HeroVideo } from "./HeroVideo";
 
 export default function Home() {
-  const CTA_LINK = "https://buy.stripe.com/00w28k0i6fn9esUaH5e3e00";
+  const CTA_LINK = "https://growmat.circle.so/checkout/-projekt-organikar";
 
   const MOCKUP = "/img/grafika/mockup.webp";
   const RECENZE_1 = "/img/recenze/img-2755-1.webp";
