@@ -722,6 +722,16 @@ export default function Home() {
       <section id="platba" className="px-6 py-16 md:py-32 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.04)_0%,transparent_50%)] pointer-events-none" />
         <div className="max-w-[500px] md:max-w-[720px] mx-auto relative z-10">
+          {/* Course mockup */}
+          <div data-reveal className="mb-8 md:mb-12 relative">
+            <div className="absolute -inset-4 md:-inset-10 bg-[radial-gradient(ellipse_at_center,rgba(74,222,128,0.08)_0%,transparent_65%)] pointer-events-none anim-breathe" />
+            <img
+              src={MOCKUP}
+              alt="Ukázka obsahu tréninku Projekt Organika"
+              className="relative w-full h-auto rounded-xl md:rounded-2xl"
+            />
+          </div>
+
           <div className="text-center">
             <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-4">Tvoje investice</div>
             <p className="text-[#9cb89c] text-[14px] md:text-base leading-relaxed">
