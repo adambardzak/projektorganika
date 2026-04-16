@@ -2,9 +2,12 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
+import { track } from "@vercel/analytics";
 
 export default function ThankYouPage() {
   useEffect(() => {
+    track("purchase", { currency: "CZK", value: 990 });
+
     if (typeof window.fbq === "function") {
       window.fbq("track", "Purchase", {
         currency: "CZK",
