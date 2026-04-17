@@ -13,7 +13,7 @@ export default function Home() {
   const RECENZE_1 = "/img/recenze/img-2755-1.webp";
   const RECENZE_2 = "/img/recenze/img-4563.webp";
   const RECENZE_3 = "/img/recenze/img-6931-1.webp";
-  const RECENZE_4 = "/img/recenze/navrh-bez-nazvu-3.webp";
+  const RECENZE_4 = "/img/recenze/navrh-bez-nazvu-3.png";
   const RECENZE_5 = "/img/recenze/recnze-5-prispevek-na-instagramu-4-5.webp";
   const RECENZE_6 = "/img/recenze/recenze-6.webp";
   const RECENZE_7 = "/img/recenze/snimek-obrazovky-2026-04-05-v-23-44-20.webp";
@@ -558,13 +558,15 @@ export default function Home() {
 
           {/* Text testimonials */}
           <div data-reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
-            {[RECENZE_1, RECENZE_2, RECENZE_3, RECENZE_4, RECENZE_5, RECENZE_6, RECENZE_7].map((src, i) => (
+            {[RECENZE_4, RECENZE_1, RECENZE_2, RECENZE_3, RECENZE_5, RECENZE_6, RECENZE_7].map((src, i) => (
               <img
                 key={i}
                 src={src}
                 loading="lazy"
                 alt={`Recenze ${i + 1}`}
-                className="rounded-xl w-full border border-[#1a2a1b] bg-[#0e160f]"
+                className={`rounded-xl w-full border border-[#1a2a1b] bg-[#0e160f] ${
+                  i === 0 ? "sm:col-span-2 md:col-span-2" : ""
+                }`}
               />
             ))}
           </div>
@@ -640,10 +642,12 @@ export default function Home() {
                 result: "Z 0 na 13K+ sledujících",
               },
               {
+                before: "/img/predapo/zijulip pred.jpg",
                 after: "/img/case-studies/marie-po.webp",
                 handle: "@zijulip",
               },
               {
+                before: "/img/predapo/vašek před.jpg",
                 after: "/img/case-studies/vasek-po.webp",
                 handle: "@vasekjindrich",
               },
