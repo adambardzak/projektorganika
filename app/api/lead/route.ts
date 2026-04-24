@@ -4,6 +4,7 @@ type SubscribePayload = {
   subscriber_data: {
     email: string;
     name: string;
+    surname?: string;
   };
   update_existing: boolean;
   trigger_autoresponders: boolean;
@@ -18,6 +19,19 @@ const ECOMAIL_BASE_URL = "https://api2.ecomailapp.cz";
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function splitFullName(fullName: string): { name: string; surname?: string } {
+  const cleaned = fullName.trim().replace(/\s+/g, " ");
+  const parts = cleaned.split(" ").filter(Boolean);
+  if (parts.length <= 1) {
+    return { name: cleaned };
+  }
+
+  return {
+    name: parts[0],
+    surname: parts.slice(1).join(" "),
+  };
 }
 
 async function resolveListId(apiKey: string): Promise<number | null> {
@@ -85,10 +99,13 @@ export async function POST(req: Request) {
     );
   }
 
+  const splitName = splitFullName(name);
+
   const payload: SubscribePayload = {
     subscriber_data: {
       email,
-      name,
+      name: splitName.name,
+      ...(splitName.surname ? { surname: splitName.surname } : {}),
     },
     update_existing: true,
     trigger_autoresponders: true,
