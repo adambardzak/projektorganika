@@ -37,7 +37,7 @@ export function StickyCta({ ctaLink }: { ctaLink: string }) {
         href={ctaLink}
         className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 text-[15px] font-bold text-white shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
       >
-        VSTOUPIT DO PROJEKTU ZA 990 KČ
+        VSTOUPIT DO TRÉNINKU ZDARMA
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <path
             d="M5 12h14M13 6l6 6-6 6"
