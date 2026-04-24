@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-const CTA_LINK = "https://growmat.circle.so/checkout/-projekt-organikar";
+const CTA_LINK = "https://growmatacademy.circle.so/";
 
 export default function PrivacyPolicy() {
   return (
