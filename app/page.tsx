@@ -211,7 +211,7 @@ export default function Home() {
               },
               {
                 before: "/img/case-studies/gabi-pred.webp",
-                after: "/img/case-studies/gabi-po.webp",
+                after: "/img/predapo/GABIPO.png",
                 handle: "@zmenasgabi",
                 result: "z 0 na 4K+ sledujících",
               },
@@ -237,13 +237,13 @@ export default function Home() {
                 before: "/img/predapo/zijulip pred.jpg",
                 after: "/img/case-studies/marie-po.webp",
                 handle: "@zijulip",
-                result: "+6000",
+                result: "+6000 sledujících",
               },
               {
                 before: "/img/predapo/vasek-pred.jpg",
                 after: "/img/case-studies/vasek-po.webp",
                 handle: "@vasekjindrich",
-                result: "+ 70 000",
+                result: "+70 000 sledujících",
               },
             ]}
           />
