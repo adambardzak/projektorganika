@@ -49,11 +49,6 @@ export function TrackedCtaLink({ href, onClick, children, ...rest }: Props) {
     e.preventDefault();
     openModal();
 
-    // Meta Pixel
-    if (typeof window.fbq === "function") {
-      window.fbq("track", "Lead");
-    }
-
     // GA4: open lead form
     if (typeof window.gtag === "function") {
       window.gtag("event", "generate_lead", {
@@ -88,6 +83,10 @@ export function TrackedCtaLink({ href, onClick, children, ...rest }: Props) {
       }
 
       track("lead_form_submit", { label: "organika" });
+
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead");
+      }
 
       if (typeof window.gtag === "function") {
         window.gtag("event", "sign_up", {
