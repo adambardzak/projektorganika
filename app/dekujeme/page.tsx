@@ -39,7 +39,7 @@ export default function ThankYouPage() {
         </p>
 
         <Link
-          href="https://growmatacademy.circle.so/"
+          href="https://growmatacademy.circle.so/sign_up"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-3 font-semibold text-white hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] transition-all"

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-const CTA_LINK = "https://growmatacademy.circle.so/";
+const CTA_LINK = "https://growmatacademy.circle.so/sign_up";
 
 export default function PrivacyPolicy() {
   return (

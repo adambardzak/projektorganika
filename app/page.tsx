@@ -7,7 +7,7 @@ import { TrackedCtaLink } from "./TrackedCtaLink";
 import { HeroVideo } from "./HeroVideo";
 
 export default function Home() {
-  const CTA_LINK = "https://growmatacademy.circle.so/";
+  const CTA_LINK = "https://growmatacademy.circle.so/sign_up";
 
   const MOCKUP = "/img/grafika/mockup.webp";
   const RECENZE_1 = "/img/recenze/img-2755-1.webp";
