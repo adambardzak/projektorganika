@@ -16,6 +16,7 @@ type EcomailList = {
 };
 
 const ECOMAIL_BASE_URL = "https://api2.ecomailapp.cz";
+const DEFAULT_CIRCLE_COMMUNITY_URL = "https://growmatacademy.circle.so";
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -32,6 +33,47 @@ function splitFullName(fullName: string): { name: string; surname?: string } {
     name: parts[0],
     surname: parts.slice(1).join(" "),
   };
+}
+
+function parseSpaceIds(raw: string | undefined): number[] {
+  if (!raw) return [];
+  return raw
+    .split(",")
+    .map((v) => v.trim())
+    .filter(Boolean)
+    .map((v) => Number(v))
+    .filter((n) => Number.isInteger(n) && n > 0);
+}
+
+async function addMemberToCircle(params: {
+  email: string;
+  fullName: string;
+  token: string;
+  spaceIds: number[];
+  communityUrl: string;
+}) {
+  const { email, fullName, token, spaceIds, communityUrl } = params;
+  const baseUrl = communityUrl.replace(/\/+$/, "");
+
+  const response = await fetch(`${baseUrl}/api/admin/v2/community_members`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email,
+      name: fullName,
+      space_ids: spaceIds,
+      send_invitation_email: true,
+    }),
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+    throw new Error(details || "Circle API request failed");
+  }
 }
 
 async function resolveListId(apiKey: string): Promise<number | null> {
@@ -63,10 +105,27 @@ async function resolveListId(apiKey: string): Promise<number | null> {
 
 export async function POST(req: Request) {
   const apiKey = process.env.ECOMAIL_API_KEY;
+  const circleToken = process.env.CIRCLE_API_TOKEN;
+  const circleCommunityUrl = process.env.CIRCLE_COMMUNITY_URL || DEFAULT_CIRCLE_COMMUNITY_URL;
+  const circleSpaceIds = parseSpaceIds(process.env.CIRCLE_SPACE_IDS);
 
   if (!apiKey) {
     return NextResponse.json(
       { error: "Chybí serverová konfigurace Ecomail API." },
+      { status: 500 },
+    );
+  }
+
+  if (!circleToken) {
+    return NextResponse.json(
+      { error: "Chybí serverová konfigurace Circle API tokenu." },
+      { status: 500 },
+    );
+  }
+
+  if (circleSpaceIds.length === 0) {
+    return NextResponse.json(
+      { error: "Chybí CIRCLE_SPACE_IDS. Nastav ID prostoru v Circle." },
       { status: 500 },
     );
   }
@@ -126,6 +185,24 @@ export async function POST(req: Request) {
     const details = await response.text();
     return NextResponse.json(
       { error: "Nepodařilo se uložit kontakt do Ecomailu.", details },
+      { status: 502 },
+    );
+  }
+
+  try {
+    await addMemberToCircle({
+      email,
+      fullName: name,
+      token: circleToken,
+      spaceIds: circleSpaceIds,
+      communityUrl: circleCommunityUrl,
+    });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        error: "Kontakt se uložil do Ecomailu, ale nepodařilo se vytvořit člena v Circle.",
+        details: error instanceof Error ? error.message : "Unknown error",
+      },
       { status: 502 },
     );
   }
