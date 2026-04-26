@@ -116,12 +116,14 @@ export function CaseStudiesCarousel({ cases }: { cases: CaseStudy[] }) {
                     </svg>
                   </>
                 )}
-                <img
-                  src={c.after}
-                  alt={c.before ? "Po" : "Screenshot účtu"}
-                  loading="lazy"
-                  className="w-full rounded-lg"
-                />
+                <div className="w-full rounded-lg overflow-hidden">
+                  <img
+                    src={c.after}
+                    alt={c.before ? "Po" : "Screenshot účtu"}
+                    loading="lazy"
+                    className={`w-full`}
+                  />
+                </div>
                 {(c.handle || c.result) && (
                   <div className="text-center mt-1">
                     {c.handle && (

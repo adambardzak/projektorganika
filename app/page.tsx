@@ -593,8 +593,8 @@ export default function Home() {
               {
                 n: "07",
                  value: "",
-                 title: "Osobní zpětná vazba na úkoly",
-                 text: "Odevzdáš úkol, dostaneš osobní feedback — co funguje, co upravit.",
+                 title: "Dárek za dokončení v hodnotě 10\u00A0000 Kč",
+                 text: "Dokonči trénink a získáš možnost výhodného vstupu do Growmat Academy.",
               },
             ].map((b) => (
               <div key={b.n} className="rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-6 flex gap-4">
