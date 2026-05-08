@@ -649,17 +649,15 @@ export default function Home() {
             Tohle jsou čísla.
           </p>
 
-          {/* Text testimonials */}
-          <div data-reveal className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+          {/* Text testimonials — masonry layout */}
+          <div data-reveal className="columns-1 sm:columns-2 md:columns-3 gap-3 md:gap-5 [column-fill:_balance]">
             {[RECENZE_4, RECENZE_1, RECENZE_2, RECENZE_3, RECENZE_5, RECENZE_6, RECENZE_7].map((src, i) => (
               <img
                 key={i}
                 src={src}
                 loading="lazy"
                 alt={`Recenze ${i + 1}`}
-                className={`rounded-xl w-full border border-[#1a2a1b] bg-[#0e160f] ${
-                  i === 0 ? "sm:col-span-2 md:col-span-2" : ""
-                }`}
+                className="rounded-xl w-full border border-[#1a2a1b] bg-[#0e160f] mb-3 md:mb-5 break-inside-avoid"
               />
             ))}
           </div>
@@ -888,7 +886,7 @@ export default function Home() {
                 href={CTA_LINK}
                 className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
               >
-                CHCI JEDNO Z POSLEDNÍCH MÍST
+                CHCI SVOJE MÍSTO ZA 697 KČ
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
