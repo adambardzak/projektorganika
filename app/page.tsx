@@ -7,7 +7,7 @@ import { TrackedCtaLink } from "./TrackedCtaLink";
 import { HeroVideo } from "./HeroVideo";
 
 export default function Home() {
-  const CTA_LINK = "https://growmatacademy.circle.so/sign_up";
+  const CTA_LINK = "https://growmatacademy.circle.so/checkout/-projekt-organikar";
 
   const MOCKUP = "/img/grafika/mockup.webp";
   const RECENZE_1 = "/img/recenze/img-2755-1.webp";
@@ -135,14 +135,14 @@ export default function Home() {
           data-reveal
           className="relative overflow-hidden anim-shimmer mt-4 md:mt-10 w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-[15px] md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
         >
-          CHCI PŘÍSTUP ZDARMA
+          CHCI SYSTÉM ZA 697 KČ
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </TrackedCtaLink>
 
         <p className="mt-2.5 text-[10px] md:text-xs text-[#6b8a6b] flex items-center gap-2 md:gap-3">
-          <span>🔒 Okamžitý přístup po zadání e-mailu</span><span>·</span><span>Doživotně</span>
+          <span>🔒 Bezpečná platba</span><span>·</span><span>Okamžitý přístup</span><span>·</span><span>Doživotní členství</span>
         </p>
       </section>
 
@@ -419,7 +419,7 @@ export default function Home() {
               href={CTA_LINK}
               className="mt-8 md:mt-12 w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
-              ZÍSKAT PŘÍSTUP
+              ZÍSKAT SYSTÉM — 697 KČ
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -456,7 +456,7 @@ export default function Home() {
               {
                 num: "01",
                 day: "Den 1",
-                value: "",
+                value: "3 990 Kč",
                 title: "Profil, ze kterého je jasné, proč jsi autorita",
                 subtitle: 'Návštěvník do 3 sekund ví: „Tohle je ten, koho hledám."',
                 bullets: [
@@ -468,7 +468,7 @@ export default function Home() {
               {
                 num: "02",
                 day: "Den 2",
-                value: "",
+                value: "4 990 Kč",
                 title: "Jak dostat myšlenku z hlavy do obsahu, který lidi zajímá",
                 subtitle: "Natočíš svůj 1. úspěšný příspěvek — dnes.",
                 bullets: [
@@ -480,7 +480,7 @@ export default function Home() {
               {
                 num: "03",
                 day: "Den 3",
-                value: "",
+                value: "5 990 Kč",
                 title: "Kompletní systém obsahu na celý týden",
                 subtitle: "Hotový systém, jak si naplánovat obsah na 1–2 týdny dopředu — bez stresu a bez nekonečného vymýšlení.",
                 bullets: [
@@ -525,7 +525,7 @@ export default function Home() {
               href={CTA_LINK}
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-8 py-4 text-base md:text-lg font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
             >
-              CHCI PŘÍSTUP
+              CHCI SYSTÉM — 697 KČ
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -556,43 +556,43 @@ export default function Home() {
             {[
               {
                 n: "01",
-                 value: "",
+                 value: "4 990 Kč",
                 title: "5 ověřených šablon úspěšných příspěvků",
                 text: "Od hooku po CTA. Za 15 minut vytvoříš svůj první příspěvek.",
               },
               {
                 n: "02",
-                 value: "",
+                 value: "3 990 Kč",
                 title: "Rozbor 5 virálních videí s miliony zhlédnutí",
                 text: "Ukážu ti přesně, proč to funguje — ne jen že to funguje.",
               },
               {
                 n: "03",
-                 value: "",
+                 value: "4 990 Kč",
                 title: "3 případové studie klientů",
                 text: "3 klienti. 3 obory. 1 systém. Reálné screenshoty, čísla a kroky.",
               },
               {
                 n: "04",
-                 value: "",
+                 value: "2 990 Kč",
                 title: "Uzavřená komunita na Circle",
                 text: "Ptej se na cokoliv. Odpovědi od člověka, co vybudoval 6 účtů z nuly.",
               },
               {
                 n: "05",
-                 value: "",
+                 value: "4 990 Kč",
                 title: "Osobní zpětná vazba na úkoly",
                 text: "Odevzdáš úkol, dostaneš osobní feedback — co funguje, co upravit.",
               },
               {
                 n: "06",
-                 value: "",
+                 value: "5 000 Kč",
                  title: "Šance na 1:1 Mentoring",
                  text: "60 minut mentoringu. Dokonči úkoly a kvalifikuješ se.",
               },
               {
                 n: "07",
-                 value: "",
+                 value: "10 000 Kč",
                  title: "Dárek za dokončení v hodnotě 10\u00A0000 Kč",
                  text: "Dokonči trénink a získáš možnost výhodného vstupu do Growmat Academy.",
               },
@@ -614,7 +614,7 @@ export default function Home() {
           {/* Value summary */}
           <div className="mt-8 md:mt-10 text-center py-5 md:py-6 border-t border-b border-[#1a2a1b]">
             <p className="text-[15px] md:text-lg text-[#9cb89c]">
-              Všechny bonusy jsou součástí vstupu <strong className="text-[#4ade80] text-xl md:text-2xl">zdarma</strong>.
+              Hodnota bonusů: <span className="text-[#6b8a6b] line-through">36 950 Kč</span> · v ceně tréninku <strong className="text-[#4ade80] text-xl md:text-2xl">697 Kč</strong>
             </p>
           </div>
 
@@ -763,21 +763,76 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Value breakdown */}
+          <div data-reveal className="mt-8 md:mt-10 rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
+            <p className="text-[10px] md:text-xs tracking-wider uppercase text-[#4ade80] font-medium mb-4">
+              3denní trénink · 14 970 Kč
+            </p>
+            <ul className="space-y-2.5 md:space-y-3">
+              {[
+                { t: "Den 1 — Profil autority", v: "3 990 Kč" },
+                { t: "Den 2 — Obsah, který přivádí klienty", v: "4 990 Kč" },
+                { t: "Den 3 — Kompletní systém obsahu na týden", v: "5 990 Kč" },
+              ].map((item, i) => (
+                <li key={i} className="flex items-start justify-between gap-3 text-[13px] md:text-[15px]">
+                  <span className="text-[#c5d8c5] flex items-start gap-2">
+                    <span className="text-[#4ade80] mt-0.5 shrink-0">✓</span>
+                    <span>{item.t}</span>
+                  </span>
+                  <span className="text-[#6b8a6b] shrink-0 tabular-nums">{item.v}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="my-5 md:my-6 h-px bg-[#1a2a1b]" />
+
+            <p className="text-[10px] md:text-xs tracking-wider uppercase text-[#4ade80] font-medium mb-4">
+              Bonusy · 36 950 Kč
+            </p>
+            <ul className="space-y-2.5 md:space-y-3">
+              {[
+                { t: "5 šablon úspěšných příspěvků", v: "4 990 Kč" },
+                { t: "Rozbor 5 virálních videí", v: "3 990 Kč" },
+                { t: "3 případové studie klientů", v: "4 990 Kč" },
+                { t: "Uzavřená komunita na Circle", v: "2 990 Kč" },
+                { t: "Osobní zpětná vazba na úkoly", v: "4 990 Kč" },
+                { t: "Šance na 1:1 Mentoring", v: "5 000 Kč" },
+                { t: "Dárek za dokončení (vstup do Growmat Academy)", v: "10 000 Kč" },
+              ].map((item, i) => (
+                <li key={i} className="flex items-start justify-between gap-3 text-[13px] md:text-[15px]">
+                  <span className="text-[#c5d8c5] flex items-start gap-2">
+                    <span className="text-[#4ade80] mt-0.5 shrink-0">🎁</span>
+                    <span>{item.t}</span>
+                  </span>
+                  <span className="text-[#6b8a6b] shrink-0 tabular-nums">{item.v}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="my-5 md:my-6 h-px bg-[#1a2a1b]" />
+
+            <div className="flex items-center justify-between text-sm md:text-base">
+              <span className="text-[#9cb89c]">Celková hodnota:</span>
+              <span className="text-[#6b8a6b] line-through text-lg md:text-2xl tabular-nums">51 920 Kč</span>
+            </div>
+          </div>
+
           {/* Price card */}
           <div data-reveal data-reveal-delay="1" className="mt-6 md:mt-8 rounded-2xl border border-[#4ade80]/30 bg-[#0e160f] p-6 md:p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4ade80]/50 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4ade80]/20 to-transparent" />
 
-            <p className="text-[#4ade80] text-xs md:text-sm font-medium tracking-wider uppercase">Tvoje investice</p>
-            <p className="text-5xl md:text-7xl font-bold text-white mt-1">0 Kč</p>
+            <p className="text-[#4ade80] text-xs md:text-sm font-medium tracking-wider uppercase">Dnes pouze</p>
+            <p className="text-5xl md:text-7xl font-bold text-white mt-1">697 Kč</p>
 
             <p className="mt-5 md:mt-6 text-[#c5d8c5] text-sm md:text-base leading-relaxed max-w-[420px] mx-auto">
-              <strong className="text-white">Podmínka:</strong> Prvních 100 míst. <strong className="text-white">Limit:</strong> 100 míst v první vlně.
+              Pokud ti trénink nepřinese alespoň 3 konkrétní &bdquo;aha momenty&ldquo;,{" "}
+              <strong className="text-white">vrátím ti peníze.</strong> Bez otázek.
             </p>
 
             <div className="mt-5 md:mt-8 py-3 px-4 md:py-4 md:px-6 rounded-xl bg-[#141e15]/50 border border-[#1a2a1b]/50 inline-block">
               <p className="text-[#e2a84b] font-medium text-sm md:text-base">
-                ⏰ První vlna: 100 míst. Po naplnění kapacity se trénink zavírá.
+                ⏰ 697 Kč jen pro prvních 100 lidí. Pak 1 490 Kč.
               </p>
             </div>
 
@@ -786,7 +841,7 @@ export default function Home() {
                 href={CTA_LINK}
                 className="relative overflow-hidden anim-shimmer w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
               >
-                ZAJISTIT MÍSTO
+                VSTOUPIT ZA 697 KČ
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -794,7 +849,7 @@ export default function Home() {
             </div>
 
             <p className="mt-3 text-[11px] md:text-xs text-[#6b8a6b] flex items-center justify-center gap-2 md:gap-3">
-              <span>🔒 Okamžitý přístup po zadání e-mailu</span><span>·</span><span>Doživotně</span>
+              <span>🔒 Bezpečná platba</span><span>·</span><span>Okamžitý přístup</span><span>·</span><span>Doživotní členství</span>
             </p>
           </div>
 
@@ -805,7 +860,7 @@ export default function Home() {
             </p>
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed mt-3">
               Pokud ti trénink nepřinese alespoň <strong className="text-white">3 konkrétní &bdquo;aha momenty&ldquo;</strong> do konce 3. dne,
-              <strong className="text-white"> osobně ti pošlu rozbor tvého profilu.</strong>
+              <strong className="text-white"> vrátím ti peníze.</strong>
             </p>
             <p className="text-[#9cb89c] text-sm md:text-base mt-3">Bez podmínek. Bez upsellu.</p>
             <div className="mt-6">
@@ -822,12 +877,12 @@ export default function Home() {
           </div>
 
           <div className="mt-6 md:mt-8 rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8 text-center">
-            <h3 className="font-bold text-lg md:text-2xl mb-3">⏰ První vlna: 100 míst</h3>
+            <h3 className="font-bold text-lg md:text-2xl mb-3">⏰ První vlna: 100 míst za 697 Kč</h3>
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed">
               Každý v komunitě dostane ode mě osobní zpětnou vazbu na úkoly. Kapacita je omezená!
             </p>
             <p className="text-[#e2a84b] font-medium mt-4">Aktuálně volno: 100/100 míst</p>
-            <p className="text-[#9cb89c] text-sm md:text-base mt-2">Po naplnění kapacity se trénink ZAVÍRÁ.</p>
+            <p className="text-[#9cb89c] text-sm md:text-base mt-2">Po naplnění kapacity cena stoupá na 1 490 Kč.</p>
             <div className="mt-6">
               <TrackedCtaLink
                 href={CTA_LINK}
@@ -840,7 +895,7 @@ export default function Home() {
               </TrackedCtaLink>
             </div>
             <p className="mt-3 text-[11px] md:text-xs text-[#6b8a6b] flex items-center justify-center gap-2 md:gap-3">
-              <span>🔒 Okamžitý přístup po zadání e-mailu</span><span>·</span><span>Doživotně</span>
+              <span>🔒 Bezpečná platba</span><span>·</span><span>Okamžitý přístup</span><span>·</span><span>Doživotní členství</span>
             </p>
           </div>
         </div>
@@ -859,8 +914,8 @@ export default function Home() {
           <div data-reveal data-reveal-delay="1" className="divide-y divide-[#1a2a1b]">
             {[
               {
-                q: "Co se stane po zadání e-mailu?",
-                a: "Hned po zadání e-mailu dostaneš přístup do Circle komunity - zde se přihlásíš a sleduješ zdarma. Pustíš si ho kdykoliv. Žádné čekání.",
+                q: "Co se stane po zaplacení?",
+                a: "Hned po zaplacení dostaneš přístupové údaje do Circle komunity, kde najdeš celý trénink. Pustíš si ho kdykoliv. Žádné čekání.",
               },
               {
                 q: "Čím je tohle jiné od jiných kurzů?",
@@ -873,6 +928,14 @@ export default function Home() {
               {
                 q: "Nemám zkušenosti s natáčením — zvládnu to?",
                 a: "Ano. Systém funguje i bez mluvení na kameru. Stačí telefon a 15 minut denně.",
+              },
+              {
+                q: "Co když to u mě nebude fungovat?",
+                a: "Systém fungoval u 6 různých účtů napříč různými obory. Pokud ti trénink nepřinese alespoň 3 konkrétní „aha momenty\" do konce 3. dne, vrátím ti peníze. Bez otázek.",
+              },
+              {
+                q: "Jak dlouho mám přístup?",
+                a: "Doživotně. Zaplatíš jednou a máš přístup navždy — včetně všech budoucích aktualizací.",
               },
             ].map((faq, i) => (
               <details key={i} className="group py-5 md:py-6 cursor-pointer">
@@ -928,14 +991,14 @@ export default function Home() {
             data-reveal-delay="1"
             className="relative overflow-hidden anim-shimmer w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#0a1a0a] via-[#143d1a] to-[#1a5c25] border border-[#2a5a2a] px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold text-white transition-all hover:from-[#0f220f] hover:via-[#1a4d20] hover:to-[#22702e] hover:shadow-[0_0_40px_rgba(74,222,128,0.15)] active:scale-[0.98]"
           >
-            VSTOUPIT DO TRÉNINKU
+            ZAČÍT TEĎ ZA 697 KČ
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M5 12h14M13 6l6 6-6 6" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </TrackedCtaLink>
 
           <p className="mt-3 text-[11px] md:text-xs text-[#6b8a6b] flex items-center justify-center gap-2 md:gap-3">
-            <span>🔒 Okamžitý přístup po zadání e-mailu</span><span>·</span><span>Doživotně</span>
+            <span>🔒 Bezpečná platba</span><span>·</span><span>Okamžitý přístup</span><span>·</span><span>Doživotní členství</span>
           </p>
         </div>
       </section>
@@ -944,7 +1007,7 @@ export default function Home() {
       <footer className="px-6 py-12 md:py-16 border-t border-[#1a2a1b]">
         <div className="max-w-[500px] md:max-w-[640px] mx-auto text-center">
           <p className="text-[#9cb89c] leading-relaxed text-sm md:text-base">
-            <strong className="text-white">P.S.</strong> První vlna je 100 míst. Zavírám ve chvíli, kdy je plno. @celiso.cz má dnes 30&nbsp;000+ sledujících. Jediný rozdíl mezi ním a tebou? On ten systém už má.
+            <strong className="text-white">P.S.</strong> 697 Kč platí jen pro prvních 100 míst. Pak 1 490 Kč. @celiso.cz má dnes 30&nbsp;000+ sledujících. Jediný rozdíl mezi ním a tebou? On ten systém už má.
           </p>
 
           <Wordmark size="sm" className="mt-8 opacity-60" />

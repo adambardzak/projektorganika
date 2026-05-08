@@ -23,7 +23,7 @@ export function Header() {
     >
       <div className="h-8 md:h-9 border-b border-[#1a2a1b] bg-[#0d120d]/90 backdrop-blur-xl flex items-center justify-center px-3">
         <p className="text-center text-[#e2a84b] font-semibold text-[10px] md:text-xs tracking-wide uppercase leading-tight">
-          ⚠️ Pozor: Kapacita zdarma je omezená! (zbývá 100 míst)
+          ⚠️ První vlna: 100 míst za 697 Kč. Pak 1 490 Kč.
         </p>
       </div>
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-center">

@@ -6,19 +6,19 @@ import { track } from "@vercel/analytics";
 
 export default function ThankYouPage() {
   useEffect(() => {
-    track("purchase", { currency: "CZK", value: 990 });
+    track("purchase", { currency: "CZK", value: 697 });
 
     if (typeof window.fbq === "function") {
       window.fbq("track", "Purchase", {
         currency: "CZK",
-        value: 990,
+        value: 697,
       });
     }
 
     if (typeof window.gtag === "function") {
       window.gtag("event", "purchase", {
         currency: "CZK",
-        value: 990,
+        value: 697,
       });
     }
   }, []);
