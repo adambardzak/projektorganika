@@ -27,7 +27,7 @@ export default function Home() {
       {/* ==================== HERO ==================== */}
       <section className="relative z-10 md:min-h-[100dvh] flex flex-col items-center md:justify-center px-5 md:px-6 pt-24 md:pt-32 pb-6 md:pb-20">
         <p data-reveal className="text-[#e2a84b] font-medium text-[12px] md:text-lg mb-2 md:mb-6 tracking-wide text-center">
-          Podnikáš ve zdraví a Instagram je &bdquo;proti Tobě&ldquo;?
+          Podnikáš a Instagram je &bdquo;proti Tobě&ldquo;?
         </p>
 
         <h1
@@ -35,7 +35,7 @@ export default function Home() {
           data-reveal-delay="1"
           className="text-center max-w-[860px] font-bold leading-[1.05] tracking-tight text-[1.875rem] sm:text-[2.25rem] md:text-[3.75rem]"
         >
-          Jak <span className="text-[#4ade80]">podnikatelé ve zdraví</span> získali <span className="text-[#4ade80]">10&nbsp;000 sledujících</span> a <span className="text-[#4ade80]">20+ klientů</span> za 40 dnů - bez placené reklamy, agentury a jen s telefonem
+          Jak <span className="text-[#4ade80]">podnikatelé a experti</span> získali <span className="text-[#4ade80]">10&nbsp;000 sledujících</span> a <span className="text-[#4ade80]">20+ klientů</span> za 40 dnů - bez placené reklamy, agentury a jen s telefonem
         </h1>
 
         <p
@@ -43,7 +43,7 @@ export default function Home() {
           data-reveal-delay="2"
           className="mt-2 md:mt-6 text-center text-[14px] md:text-lg text-white max-w-[560px] leading-snug"
         >
-          3 denní trénink pro podnikatele ve zdraví - jasný systém, konkrétní kroky a zpětná vazba.
+          3 denní trénink pro podnikatele a experty - jasný systém, konkrétní kroky a zpětná vazba.
         </p>
 
         {/* Hero VSL Video */}
@@ -283,7 +283,7 @@ export default function Home() {
                 <strong className="text-white">Máš v hlavě hromadu vědomostí</strong> — ale nedokážeš je dostat ven do formy, která na Instagramu funguje.
               </p>
               <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Účty ve zdraví vypadají všechny stejně.</strong> Ty to tak dělat nechceš — ale nevíš, jak být svůj/svá a zároveň efektivní.
+                <strong className="text-white">Účty ve tvém oboru vypadají všechny stejně.</strong> Ty to tak dělat nechceš — ale nevíš, jak být svůj/svá a zároveň efektivní.
               </p>
               <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
                 <strong className="text-white">Zkoušel/a jsi to po svém — a nic.</strong> Algoritmus tě ignoruje.
@@ -352,7 +352,7 @@ export default function Home() {
               Převezmi ověřený &bdquo;Growmat&ldquo; systém.
             </h3>
             <p className="mt-5 md:mt-6 text-[#c5d8c5] text-[15px] md:text-lg leading-relaxed">
-              3-fázový systém, který proměňuje <strong className="text-white">neviditelné experty v autority se stabilním přísunem klientů.</strong>
+              3-fázový systém, který proměňuje <strong className="text-white">neviditelné podnikatele a experty v autority se stabilním přísunem klientů.</strong>
             </p>
 
             <div data-reveal className="mt-10 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 border-y border-[#1a2a1b]/60 py-10 md:py-12">
@@ -473,7 +473,7 @@ export default function Home() {
                 subtitle: "Natočíš svůj 1. úspěšný příspěvek — dnes.",
                 bullets: [
                   <>Ověřený systém tvorby obsahu, který <strong className="text-white">přivádí klienty</strong></>,
-                  <><strong className="text-white">3 formáty</strong> co fungují ve zdraví — bez šaškování na kameru</>,
+                  <><strong className="text-white">3 formáty</strong> které fungují v jakémkoliv oboru — bez šaškování na kameru</>,
                   <>První hotový příspěvek připravený k publikaci</>,
                 ],
               },
@@ -484,7 +484,7 @@ export default function Home() {
                 title: "Kompletní systém obsahu na celý týden",
                 subtitle: "Hotový systém, jak si naplánovat obsah na 1–2 týdny dopředu — bez stresu a bez nekonečného vymýšlení.",
                 bullets: [
-                  <><strong className="text-white">Kompletní Growmat systém &bdquo;od příspěvku po delegaci&ldquo;</strong> — 3 reálné případové studie pod pokličkou, abys viděl/a, že to funguje i pro experty ve zdraví</>,
+                  <><strong className="text-white">Kompletní Growmat systém &bdquo;od příspěvku po delegaci&ldquo;</strong> — 3 reálné případové studie pod pokličkou, abys viděl/a, že to funguje napříč obory</>,
                   <><strong className="text-white">Jasný plán obsahu na celý týden</strong> — budeš přesně vědět, co sdílet, v jakém formátu a proč to funguje</>,
                   <><strong className="text-white">Dárek v hodnotě 10 000 Kč</strong> + možnost mentoringu 1:1 zdarma — abys měl/a jistotu, že v tom nezůstaneš sám/a</>,
                 ],
@@ -703,7 +703,7 @@ export default function Home() {
             </svg>
           </h2>
           <p className="text-[#4ade80] font-medium text-sm md:text-base mb-3 md:mb-4">
-            Expert na sociální sítě ve zdraví
+            Expert na sociální sítě a organický růst
           </p>
 
           <a
@@ -726,7 +726,7 @@ export default function Home() {
               Před dvěma lety mi obchodní partner vzal všechno — podcastové účty s 30&nbsp;000 sledujícími. Ze dne na den jsem stál na nule. S&nbsp;dluhy. Bez příjmu.
             </p>
             <p>
-              Začal jsem znovu. Vzal jsem všechno, co jsem se naučil o sociálních sítích, a začal systematicky budovat profily pro experty ve zdraví.
+              Začal jsem znovu. Vzal jsem všechno, co jsem se naučil o sociálních sítích, a začal systematicky budovat profily pro podnikatele a experty napříč obory.
             </p>
             <p className="text-white font-medium">
               Za poslední rok: 6 účtů z nuly na 10 000+ sledujících. 30 milionů organických zhlédnutí. Desítky klientů pro každého. 0 Kč do reklamy.
@@ -801,7 +801,7 @@ export default function Home() {
           <div className="mt-6 md:mt-8 rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
             <h3 className="font-bold text-lg md:text-2xl mb-3 md:mb-4">Co když to u mě nezafunguje?</h3>
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed">
-              Systém fungoval u 6 různých účtů v různých zdravotních oborech.
+              Systém fungoval u 6 různých účtů napříč různými obory.
             </p>
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed mt-3">
               Pokud ti trénink nepřinese alespoň <strong className="text-white">3 konkrétní &bdquo;aha momenty&ldquo;</strong> do konce 3. dne,
@@ -867,8 +867,8 @@ export default function Home() {
                 a: "Většina kurzů ti naloží další informace. Ty jich máš až moc. Projekt Organika ti dá jednoduchý ověřený systém — přesně co sdílet, jak a proč to funguje + zpětnou vazbu.",
               },
               {
-                q: "Je to i pro lidi mimo zdraví?",
-                a: "Ne. 3 denní trénink Projekt Organika byl vytvořen speciálně pro tvůrce v oblasti zdraví - mentálním, fyzickém. Pokud jsi mentální kouč/ka, terapeut/ka, léčitel/ka, fitness coach nebo chceš začít pomáhat lidem v oblasti zdraví - tento trénink je pro Tebe.",
+                q: "Pro koho to je?",
+                a: "Pro podnikatele, experty, kouče, poradce, terapeuty, freelancery, OSVČ a tvůrce obsahu — pro každého, kdo chce na Instagramu budovat autoritu a získávat klienty. Systém funguje napříč obory: zdraví, fitness, vzdělávání, byznys, kreativní profese a další.",
               },
               {
                 q: "Nemám zkušenosti s natáčením — zvládnu to?",

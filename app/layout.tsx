@@ -11,12 +11,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Projekt Organika™ — Systém pro experty ve zdraví",
+  title: "Projekt Organika™ — Systém pro podnikatele a experty",
   description:
-    "3denní online trénink pro experty ve zdraví. Získej systém, díky kterému experti získali z 0 na 10 000+ sledujících a 20+ klientů za 40 dnů. Bez reklam. Bez agentury. Jen přes telefon.",
+    "3denní online trénink pro podnikatele a experty. Získej systém, díky kterému získali z 0 na 10 000+ sledujících a 20+ klientů za 40 dnů. Bez reklam. Bez agentury. Jen přes telefon.",
   metadataBase: new URL("https://projektorganika.cz"),
   openGraph: {
-    title: "Projekt Organika™ — Systém pro experty ve zdraví",
+    title: "Projekt Organika™ — Systém pro podnikatele a experty",
     description:
       "3denní online trénink: z 0 na 10 000+ sledujících a 20 klientů za 40 dnů. Bez reklam. Krok za krokem.",
     url: "https://projektorganika.cz",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Projekt Organika™ — Systém pro experty ve zdraví",
+    title: "Projekt Organika™ — Systém pro podnikatele a experty",
     description:
       "3denní online trénink: z 0 na 10 000+ sledujících a 20 klientů za 40 dnů. Bez reklam. Krok za krokem.",
   },
