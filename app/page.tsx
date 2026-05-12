@@ -5,11 +5,12 @@ import { Wordmark } from "./Wordmark";
 import { ScrollReveal } from "./ScrollReveal";
 import { TrackedCtaLink } from "./TrackedCtaLink";
 import { HeroVideo } from "./HeroVideo";
+import { MembersVysledkyCarousel } from "./MembersResultsCarousel";
 
 export default function Home() {
   const CTA_LINK = "https://growmatacademy.circle.so/checkout/-projekt-organikar";
 
-  const MOCKUP = "/img/grafika/mockup.webp";
+  const MOCKUP = "/mockup.png";
   const RECENZE_1 = "/img/recenze/img-2755-1.webp";
   const RECENZE_2 = "/img/recenze/img-4563.webp";
   const RECENZE_3 = "/img/recenze/img-6931-1.webp";
@@ -35,7 +36,8 @@ export default function Home() {
           data-reveal-delay="1"
           className="text-center max-w-[860px] font-bold leading-[1.05] tracking-tight text-[1.875rem] sm:text-[2.25rem] md:text-[3.75rem]"
         >
-          Jak <span className="text-[#4ade80]">podnikatelé a experti</span> získali <span className="text-[#4ade80]">10&nbsp;000 sledujících</span> a <span className="text-[#4ade80]">20+ klientů</span> za 40 dnů - bez placené reklamy, agentury a jen s telefonem
+          {/* Jak <span className="text-[#4ade80]">podnikatelé a experti</span> získali <span className="text-[#4ade80]">10&nbsp;000 sledujících</span> a <span className="text-[#4ade80]">20+ klientů</span> za 40 dnů - bez placené reklamy, agentury a jen s telefonem */}
+          Získej<span className="text-[#4ade80]"> prvních 1000 sledujících</span> a <span className="text-[#4ade80]">1 000 000 zhlédnutí</span> - bez placené reklamy, štěstí a jen s telefonem za<span className="text-[#4ade80]"> 30 minut denně </span>
         </h1>
 
         <p
@@ -43,7 +45,7 @@ export default function Home() {
           data-reveal-delay="2"
           className="mt-2 md:mt-6 text-center text-[14px] md:text-lg text-white max-w-[560px] leading-snug"
         >
-          3 denní trénink pro podnikatele a experty - jasný systém, konkrétní kroky a zpětná vazba.
+          3 denní minikurz v komunitě pro začínající tvůrce s osobní zpětnou vazbou od Matyho.
         </p>
 
         {/* Hero VSL Video */}
@@ -147,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* ==================== BIG STATS STRIP ==================== */}
-      <section className="relative z-10 py-10 md:py-16 border-y border-[#1a2a1b]/60 overflow-hidden">
+      {/* <section className="relative z-10 py-10 md:py-16 border-y border-[#1a2a1b]/60 overflow-hidden">
         <div data-reveal className="max-w-[900px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {[
             { num: "6", label: "účtů z 0 na 10K+" },
@@ -172,14 +174,14 @@ export default function Home() {
             </svg>
           </TrackedCtaLink>
         </div>
-      </section>
+      </section> */}
 
       {/* ==================== CASE STUDIES ==================== */}
       <section id="case-studies" className="py-16 md:py-32">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-16 px-4 md:px-6">
             <div className="text-xs font-medium tracking-widest text-[#4ade80] uppercase mb-3">
-              Případové studie
+              Výsledky členů
             </div>
             <h2
               data-reveal
@@ -189,64 +191,10 @@ export default function Home() {
             </h2>
           </div>
 
-          <CaseStudiesCarousel
-            cases={[
-              {
-                before: "/img/case-studies/vermione-pred.webp",
-                after: "/img/case-studies/vermione-po.webp",
-                handle: "@vermionekremy",
-                result: "Z 0 na 13K+ sledujících",
-              },
-              {
-                before: "/img/case-studies/celiso-pred.webp",
-                after: "/img/case-studies/celiso-po-1.webp",
-                handle: "@celiso.cz",
-                result: "30 000+ sledujících za 3 měsíce",
-              },
-              {
-                before: "/img/case-studies/martin-pred.webp",
-                after: "/img/case-studies/martin-po.webp",
-                handle: "@jidlosmartinem",
-                result: "Z 0 na 17K+ sledujících",
-              },
-              {
-                before: "/img/case-studies/gabi-pred.webp",
-                after: "/img/predapo/GABIPO.png",
-                handle: "@zmenasgabi",
-                result: "z 0 na 4K+ sledujících",
-              },
-              {
-                before: "/img/case-studies/mitolife-pred.webp",
-                after: "/img/case-studies/mito-po.webp",
-                handle: "@mitolife_cz",
-                result: "45 000+ sledujících",
-              },
-              {
-                before: "/img/case-studies/sober-pred-1-1.webp",
-                after: "/img/case-studies/sober-boys-po.webp",
-                handle: "@soberboys.podcast",
-                result: "Z 0 na 15K+ sledujících",
-              },
-              {
-                before: "/img/case-studies/socialmaty-pred-1.webp",
-                after: "/img/case-studies/maty-po.webp",
-                handle: "@socialmaty",
-                result: "Z 0 na 13K+ sledujících",
-              },
-              {
-                before: "/img/predapo/zijulip pred.jpg",
-                after: "/img/case-studies/marie-po.webp",
-                handle: "@zijulip",
-                result: "+6000 sledujících",
-              },
-              {
-                before: "/img/predapo/vasek-pred.jpg",
-                after: "/img/case-studies/vasek-po.webp",
-                handle: "@vasekjindrich",
-                result: "+70 000 sledujících",
-              },
-            ]}
-          />
+
+          <div className="mt-10" data-reveal data-reveal-delay="1">
+            <MembersVysledkyCarousel />
+          </div>
           <div className="text-center mt-8 md:mt-10 px-4 md:px-6">
             <TrackedCtaLink
               href={CTA_LINK}
@@ -273,24 +221,27 @@ export default function Home() {
 
           <div data-reveal className="md:grid md:grid-cols-[1fr_1.2fr] md:gap-12 lg:gap-16 md:items-center">
             <img
-              src="/sad.webp"
+              src="/negativpic.png"
               alt=""
               className="w-full max-h-[300px] md:max-h-none md:aspect-[4/5] rounded-2xl mb-8 md:mb-0 object-cover"
             />
 
             <div className="space-y-5 md:space-y-7">
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Máš v hlavě hromadu vědomostí</strong> — ale nedokážeš je dostat ven do formy, která na Instagramu funguje.
-              </p>
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Účty ve tvém oboru vypadají všechny stejně.</strong> Ty to tak dělat nechceš — ale nevíš, jak být svůj/svá a zároveň efektivní.
-              </p>
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Zkoušel/a jsi to po svém — a nic.</strong> Algoritmus tě ignoruje.
-              </p>
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Máš hromadu rad z kurzů.</strong> Čím víc rad, tím víc zmatku. A tím víc pochybuješ o sobě.
-              </p>
+              {[
+                <><strong className="text-white">Máš v hlavě hromadu vědomostí</strong> — ale nedokážeš je dostat ven do formy, která na Instagramu funguje.</>,
+                <><strong className="text-white">Účty ve tvém oboru vypadají všechny stejně.</strong> Ty to tak dělat nechceš — ale nevíš, jak být svůj/svá a zároveň efektivní.</>,
+                <><strong className="text-white">Zkoušel/a jsi to po svém — a nic.</strong> Algoritmus tě ignoruje.</>,
+                <><strong className="text-white">Máš hromadu rad z kurzů.</strong> Čím víc rad, tím víc zmatku. A tím víc pochybuješ o sobě.</>,
+              ].map((text, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="mt-[3px] shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-red-500/20 border border-red-500/40 flex items-center justify-center">
+                    <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
+                      <path d="M2 2l10 10M12 2L2 12" stroke="#f87171" strokeWidth="2.2" strokeLinecap="round" />
+                    </svg>
+                  </span>
+                  <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">{text}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -316,33 +267,36 @@ export default function Home() {
 
           <div data-reveal className="md:grid md:grid-cols-[1.2fr_1fr] md:gap-12 lg:gap-16 md:items-center">
             <img
-              src="/happy.webp"
+              src="/pozitivpic.png"
               alt=""
               className="w-full max-h-[300px] md:max-h-none md:aspect-[4/5] rounded-2xl mb-8 md:mb-0 object-cover md:order-2"
             />
 
             <div className="space-y-5 md:space-y-7 md:order-1">
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Víš přesně, co tvořit</strong> — a proč to funguje.
-              </p>
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Sdílíš bez strachu</strong> — autenticky, po svém. A lidi reagují.
-              </p>
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Přibývá ti relevantní komunita</strong> — lidi, které tvoje téma baví.
-              </p>
-              <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">
-                <strong className="text-white">Klienti ti píšou sami.</strong> Nehoníš se za nimi. Profil to dělá za tebe.
-              </p>
+              {[
+                <><strong className="text-white">Víš přesně, co tvořit</strong> — a proč to funguje.</>,
+                <><strong className="text-white">Sdílíš bez strachu</strong> — autenticky, po svém. A lidi reagují.</>,
+                <><strong className="text-white">Přibývá ti relevantní komunita</strong> — lidi, které tvoje téma baví.</>,
+                <><strong className="text-white">Klienti ti píšou sami.</strong> Nehoníš se za nimi. Profil to dělá za tebe.</>,
+              ].map((text, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="mt-[3px] shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center">
+                    <svg width="11" height="11" viewBox="0 0 14 14" fill="none">
+                      <path d="M2 7l4 4 6-6" stroke="#4ade80" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  <p className="text-[#c5d8c5] leading-[1.65] text-[15px] md:text-xl">{text}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="max-w-[700px] mx-auto mt-10 md:mt-16 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
+          {/* <div className="max-w-[700px] mx-auto mt-10 md:mt-16 py-6 md:py-8 border-t border-b border-[#1a2a1b]">
             <p className="text-center text-lg md:text-2xl font-semibold leading-snug">
               Nejde jen o Instagram. Jde o to, abys přestal/a pochybovat o tom, co víš —{" "}
               <span className="text-[#4ade80]">a začal/a tím měnit životy.</span>
             </p>
-          </div>
+          </div> */}
 
           <div className="max-w-[600px] md:max-w-[720px] mx-auto mt-16 md:mt-24 text-center">
             <h3
@@ -400,9 +354,8 @@ export default function Home() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`flex flex-col items-center text-center px-2 md:px-5 ${
-                    i > 0 ? "md:border-l md:border-[#1a2a1b]/60" : ""
-                  }`}
+                  className={`flex flex-col items-center text-center px-2 md:px-5 ${i > 0 ? "md:border-l md:border-[#1a2a1b]/60" : ""
+                    }`}
                 >
                   <div className="text-[#4ade80] mb-4 md:mb-5">{item.icon}</div>
                   <p className="font-semibold text-white text-[14px] md:text-[15px] leading-tight tracking-tight">
@@ -437,7 +390,7 @@ export default function Home() {
               data-reveal
               className="font-bold leading-tight tracking-tight text-2xl md:text-[2.5rem]"
             >
-              3 dny, 3 jasné výstupy.
+              3 dny, 3 výstupy, osobní podpora.
             </h2>
           </div>
 
@@ -473,7 +426,7 @@ export default function Home() {
                 subtitle: "Natočíš svůj 1. úspěšný příspěvek — dnes.",
                 bullets: [
                   <>Ověřený systém tvorby obsahu, který <strong className="text-white">přivádí klienty</strong></>,
-                  <><strong className="text-white">3 formáty</strong> které fungují v jakémkoliv oboru — bez šaškování na kameru</>,
+                  <><strong className="text-white">5 formátů</strong> které fungují v jakémkoliv oboru — bez šaškování na kameru</>,
                   <>První hotový příspěvek připravený k publikaci</>,
                 ],
               },
@@ -556,45 +509,57 @@ export default function Home() {
             {[
               {
                 n: "01",
-                 value: "4 990 Kč",
+                value: "4 990 Kč",
                 title: "5 ověřených šablon úspěšných příspěvků",
                 text: "Od hooku po CTA. Za 15 minut vytvoříš svůj první příspěvek.",
               },
               {
                 n: "02",
-                 value: "3 990 Kč",
+                value: "3 990 Kč",
                 title: "Rozbor 5 virálních videí s miliony zhlédnutí",
                 text: "Ukážu ti přesně, proč to funguje — ne jen že to funguje.",
               },
               {
                 n: "03",
-                 value: "4 990 Kč",
+                value: "4 990 Kč",
                 title: "3 případové studie klientů",
                 text: "3 klienti. 3 obory. 1 systém. Reálné screenshoty, čísla a kroky.",
               },
+              // {
+              //   n: "04",
+              //   value: "2 990 Kč",
+              //   title: "Uzavřená komunita na Circle",
+              //   text: "Ptej se na cokoliv. Odpovědi od člověka, co vybudoval 6 účtů z nuly.",
+              // },
               {
                 n: "04",
-                 value: "2 990 Kč",
-                title: "Uzavřená komunita na Circle",
-                text: "Ptej se na cokoliv. Odpovědi od člověka, co vybudoval 6 účtů z nuly.",
-              },
-              {
-                n: "05",
-                 value: "4 990 Kč",
+                value: "4 990 Kč",
                 title: "Osobní zpětná vazba na úkoly",
                 text: "Odevzdáš úkol, dostaneš osobní feedback — co funguje, co upravit.",
               },
               {
+                n: "05",
+                value: "5 000 Kč",
+                title: "Šance na 1:1 Mentoring",
+                text: "60 minut mentoringu. Dokonči úkoly a kvalifikuješ se.",
+              },
+              {
                 n: "06",
-                 value: "5 000 Kč",
-                 title: "Šance na 1:1 Mentoring",
-                 text: "60 minut mentoringu. Dokonči úkoly a kvalifikuješ se.",
+                value: "10 000 Kč",
+                title: "Dárek za dokončení v hodnotě 10\u00A0000 Kč",
+                text: "Dokonči trénink a získáš možnost výhodného vstupu do Growmat Academy.",
               },
               {
                 n: "07",
-                 value: "10 000 Kč",
-                 title: "Dárek za dokončení v hodnotě 10\u00A0000 Kč",
-                 text: "Dokonči trénink a získáš možnost výhodného vstupu do Growmat Academy.",
+                value: "1 490 Kč",
+                title: "Algoritmický hack (VIP tip od CEO Instagramu)",
+                text: "Získej nekonečný přísun nápadů pro obsah přehlíženou metodou.",
+              },
+              {
+                n: "08",
+                value: "1 490 Kč",
+                title: "Profi bio za 3 minuty pomocí Matyho AI šablony",
+                text: "Dostaneš hotové bio do 150 znaků, 3 varianty username a 5 story highlights. Bez přemýšlení. Za 3 minuty dle ověřených metod Matyho a klientů.",
               },
             ].map((b) => (
               <div key={b.n} className="rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-6 flex gap-4">
@@ -639,15 +604,15 @@ export default function Home() {
             data-reveal
             className="font-bold leading-tight tracking-tight text-center mb-3 text-2xl md:text-[2.5rem]"
           >
-            Tohle nejsou sliby.
+            Co o mně řekli:
           </h2>
-          <p
+          {/* <p
             data-reveal
             data-reveal-delay="1"
             className="text-center text-lg md:text-2xl font-semibold text-[#4ade80] mb-8 md:mb-12"
           >
             Tohle jsou čísla.
-          </p>
+          </p> */}
 
           {/* Text testimonials — masonry layout */}
           <div data-reveal className="columns-1 sm:columns-2 md:columns-3 gap-3 md:gap-5 [column-fill:_balance]">
@@ -663,14 +628,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-[900px] mx-auto mt-12 md:mt-20 text-center py-6 md:py-8 border-t border-[#1a2a1b]">
-          <p className="text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-            6 účtů z 0 na 10K+. 30 000 000+ zhlédnutí.
-          </p>
-          <p className="text-base md:text-lg text-[#9cb89c] mt-2">
-            Stovky klientů pro mé klienty. <span className="text-[#4ade80]">0 Kč do reklamy.</span>
-          </p>
-        </div>
+
       </section>
 
       {/* ==================== ABOUT / BIO ==================== */}
@@ -736,7 +694,73 @@ export default function Home() {
               Tvoje znalosti mohou lidem měnit životy. Chybí ti jen systém, aby se o nich svět dozvěděl.
             </p>
           </div>
+          <div className="max-w-[900px] mx-auto mt-12 md:mt-20 text-center py-6 md:py-8 border-t border-[#1a2a1b]">
+            <p className="text-2xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+              Statisíce sledujících. 30 000 000+ zhlédnutí.
+            </p>
+            <p className="text-base md:text-lg text-[#9cb89c] mt-2">
+              <span className="text-[#4ade80]">0 Kč do reklamy.</span>
+            </p>
+          </div>
         </div>
+        <CaseStudiesCarousel
+          cases={[
+            {
+              before: "/img/case-studies/vermione-pred.webp",
+              after: "/img/case-studies/vermione-po.webp",
+              handle: "@vermionekremy",
+              result: "Z 0 na 13K+ sledujících",
+            },
+            {
+              before: "/img/case-studies/celiso-pred.webp",
+              after: "/img/case-studies/celiso-po-1.webp",
+              handle: "@celiso.cz",
+              result: "30 000+ sledujících za 3 měsíce",
+            },
+            {
+              before: "/img/case-studies/martin-pred.webp",
+              after: "/img/case-studies/martin-po.webp",
+              handle: "@jidlosmartinem",
+              result: "Z 0 na 17K+ sledujících",
+            },
+            {
+              before: "/img/case-studies/gabi-pred.webp",
+              after: "/img/predapo/GABIPO.png",
+              handle: "@zmenasgabi",
+              result: "z 0 na 4K+ sledujících",
+            },
+            {
+              before: "/img/case-studies/mitolife-pred.webp",
+              after: "/img/case-studies/mito-po.webp",
+              handle: "@mitolife_cz",
+              result: "45 000+ sledujících",
+            },
+            {
+              before: "/img/case-studies/sober-pred-1-1.webp",
+              after: "/img/case-studies/sober-boys-po.webp",
+              handle: "@soberboys.podcast",
+              result: "Z 0 na 15K+ sledujících",
+            },
+            {
+              before: "/img/case-studies/socialmaty-pred-1.webp",
+              after: "/img/case-studies/maty-po.webp",
+              handle: "@socialmaty",
+              result: "Z 0 na 13K+ sledujících",
+            },
+            {
+              before: "/img/predapo/zijulip pred.jpg",
+              after: "/img/case-studies/marie-po.webp",
+              handle: "@zijulip",
+              result: "+6000 sledujících",
+            },
+            {
+              before: "/img/predapo/vasek-pred.jpg",
+              after: "/img/case-studies/vasek-po.webp",
+              handle: "@vasekjindrich",
+              result: "+70 000 sledujících",
+            },
+          ]}
+        />
       </section>
 
       {/* ==================== PRICING ==================== */}
@@ -785,7 +809,7 @@ export default function Home() {
             <div className="my-5 md:my-6 h-px bg-[#1a2a1b]" />
 
             <p className="text-[10px] md:text-xs tracking-wider uppercase text-[#4ade80] font-medium mb-4">
-              Bonusy · 36 950 Kč
+              Bonusy · 39 930 Kč
             </p>
             <ul className="space-y-2.5 md:space-y-3">
               {[
@@ -796,6 +820,8 @@ export default function Home() {
                 { t: "Osobní zpětná vazba na úkoly", v: "4 990 Kč" },
                 { t: "Šance na 1:1 Mentoring", v: "5 000 Kč" },
                 { t: "Dárek za dokončení (vstup do Growmat Academy)", v: "10 000 Kč" },
+                { t: "Algoritmický hack (VIP tip od CEO Instagramu)", v: "1 490 Kč" },
+                { t: "Profi bio za 3 minuty pomocí Matyho AI šablony", v: "1 490 Kč" },
               ].map((item, i) => (
                 <li key={i} className="flex items-start justify-between gap-3 text-[13px] md:text-[15px]">
                   <span className="text-[#c5d8c5] flex items-start gap-2">
@@ -811,7 +837,7 @@ export default function Home() {
 
             <div className="flex items-center justify-between text-sm md:text-base">
               <span className="text-[#9cb89c]">Celková hodnota:</span>
-              <span className="text-[#6b8a6b] line-through text-lg md:text-2xl tabular-nums">51 920 Kč</span>
+              <span className="text-[#6b8a6b] line-through text-lg md:text-2xl tabular-nums">54 900 Kč</span>
             </div>
           </div>
 
@@ -822,11 +848,6 @@ export default function Home() {
 
             <p className="text-[#4ade80] text-xs md:text-sm font-medium tracking-wider uppercase">Dnes pouze</p>
             <p className="text-5xl md:text-7xl font-bold text-white mt-1">697 Kč</p>
-
-            <p className="mt-5 md:mt-6 text-[#c5d8c5] text-sm md:text-base leading-relaxed max-w-[420px] mx-auto">
-              Pokud ti trénink nepřinese alespoň 3 konkrétní &bdquo;aha momenty&ldquo;,{" "}
-              <strong className="text-white">vrátím ti peníze.</strong> Bez otázek.
-            </p>
 
             <div className="mt-5 md:mt-8 py-3 px-4 md:py-4 md:px-6 rounded-xl bg-[#141e15]/50 border border-[#1a2a1b]/50 inline-block">
               <p className="text-[#e2a84b] font-medium text-sm md:text-base">
@@ -854,13 +875,12 @@ export default function Home() {
           <div className="mt-6 md:mt-8 rounded-2xl border border-[#1a2a1b] bg-[#0e160f] p-5 md:p-8">
             <h3 className="font-bold text-lg md:text-2xl mb-3 md:mb-4">Co když to u mě nezafunguje?</h3>
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed">
-              Systém fungoval u 6 různých účtů napříč různými obory.
+              Systém fungoval u <b className="text-white">15+ různých účtů</b> napříč různými obory.
             </p>
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed mt-3">
-              Pokud ti trénink nepřinese alespoň <strong className="text-white">3 konkrétní &bdquo;aha momenty&ldquo;</strong> do konce 3. dne,
-              <strong className="text-white"> vrátím ti peníze.</strong>
+              Během minikurzu máš mou <b className="text-white">osobní zpětnou</b> vazbu - co konkrétně zlepšit.
             </p>
-            <p className="text-[#9cb89c] text-sm md:text-base mt-3">Bez podmínek. Bez upsellu.</p>
+            <p className="text-[#9cb89c] text-sm md:text-base mt-3">Tvůj úspěch = Můj úspěch</p>
             <div className="mt-6">
               <TrackedCtaLink
                 href={CTA_LINK}
@@ -879,7 +899,7 @@ export default function Home() {
             <p className="text-[#c5d8c5] text-sm md:text-base leading-relaxed">
               Každý v komunitě dostane ode mě osobní zpětnou vazbu na úkoly. Kapacita je omezená!
             </p>
-            <p className="text-[#e2a84b] font-medium mt-4">Aktuálně volno: 100/100 míst</p>
+            <p className="text-[#e2a84b] font-medium mt-4">Aktuálně volno: 67/100 míst</p>
             <p className="text-[#9cb89c] text-sm md:text-base mt-2">Po naplnění kapacity cena stoupá na 1 490 Kč.</p>
             <div className="mt-6">
               <TrackedCtaLink
@@ -929,7 +949,7 @@ export default function Home() {
               },
               {
                 q: "Co když to u mě nebude fungovat?",
-                a: "Systém fungoval u 6 různých účtů napříč různými obory. Pokud ti trénink nepřinese alespoň 3 konkrétní „aha momenty\" do konce 3. dne, vrátím ti peníze. Bez otázek.",
+                a: "Systém fungoval u 15 různých účtů napříč různými obory. Osobní zpětná vazba od Matyho ti pomůže k výsledkům."
               },
               {
                 q: "Jak dlouho mám přístup?",
@@ -1005,7 +1025,7 @@ export default function Home() {
       <footer className="px-6 py-12 md:py-16 border-t border-[#1a2a1b]">
         <div className="max-w-[500px] md:max-w-[640px] mx-auto text-center">
           <p className="text-[#9cb89c] leading-relaxed text-sm md:text-base">
-            <strong className="text-white">P.S.</strong> 697 Kč platí jen pro prvních 100 míst. Pak 1 490 Kč. @celiso.cz má dnes 30&nbsp;000+ sledujících. Jediný rozdíl mezi ním a tebou? On ten systém už má.
+            <strong className="text-white">P.S.</strong> 697 Kč platí jen pro prvních 100 míst. Pak 1 490 Kč. Tohle je tvá poslední šance začít růst.
           </p>
 
           <Wordmark size="sm" className="mt-8 opacity-60" />
