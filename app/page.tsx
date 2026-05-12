@@ -1025,7 +1025,7 @@ export default function Home() {
       <footer className="px-6 py-12 md:py-16 border-t border-[#1a2a1b]">
         <div className="max-w-[500px] md:max-w-[640px] mx-auto text-center">
           <p className="text-[#9cb89c] leading-relaxed text-sm md:text-base">
-            <strong className="text-white">P.S.</strong> 697 Kč platí jen pro prvních 100 míst. Pak 1 490 Kč. Tohle je tvá poslední šance začít růst.
+            <strong className="text-white">P.S.</strong> 697 Kč platí jen pro prvních 100 míst. Pak 1 490 Kč. Tohle je možná tvá poslední šance začít růst.
           </p>
 
           <Wordmark size="sm" className="mt-8 opacity-60" />
